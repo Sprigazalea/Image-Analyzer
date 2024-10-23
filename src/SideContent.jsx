@@ -3,7 +3,7 @@ import './SideContent.css'
 function SideContent() {
     return (
         <>
-            <div className="default-div">test2</div>
+            <div className="default-div"></div>
         </>
     )
 }

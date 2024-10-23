@@ -1,5 +1,6 @@
-default-div {
-    height: 200px;
-    width: 500px;
-    background-color: blue;
+.default-div {
+    height: 600px;
+    width: 270px;
+    background-color: rgb(61, 61, 61);
+    border-radius: 15px;
 }
