@@ -1,3 +1,5 @@
+import './SideContent.css'
+
 function SideContent() {
     return (
         <>
