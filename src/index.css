@@ -8,3 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.display-div {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 25px;
+}
+

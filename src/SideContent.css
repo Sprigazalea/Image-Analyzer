@@ -1,6 +1,13 @@
 .default-side-div {
     height: 600px;
-    width: 270px;
+    width: 300px;
     background-color: rgb(61, 61, 61);
+    border-radius: 15px;
+}
+
+.inner-div {
+    height: 300px;
+    width: 300px;
+    background-color: black;
     border-radius: 15px;
 }
