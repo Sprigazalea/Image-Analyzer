@@ -3,9 +3,9 @@ import './SideContent.css'
 function SideContent() {
     return (
         <>
-            <div className="default-side-div">
-              <div className='inner-div'></div>
-            </div>
+        <div className="default-side-div">
+            <div className='inner-div'></div>
+        </div>
         </>
     )
 }

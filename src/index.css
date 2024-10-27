@@ -1,17 +1,17 @@
 :root {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(22, 31, 46);
+    color: rgba(255, 255, 255, 0.87);
+    background-color: rgb(22, 31, 46);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .display-div {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  padding-top: 25px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding-top: 25px;
 }
 

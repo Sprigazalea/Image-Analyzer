@@ -5,10 +5,10 @@ import SideContent from './SideContent.jsx'
 import MainContent from './MainContent.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <div className='display-div'>
-      <SideContent />
-      <MainContent />
-    </div>
-  </StrictMode>,
+    <StrictMode>
+        <div className='display-div'>
+        <SideContent />
+        <MainContent />
+        </div>
+    </StrictMode>,
 )
