@@ -1,6 +1,6 @@
 $color_1: rgba(255, 255, 255, 0.87);
 $background-color_1: rgb(22, 31, 46);
-$background-color_2: rgb(61, 61, 61);
+$background-color_2: rgb(70, 70, 70);
 $background-color_3: rgb(45, 45, 45);
 
 :root {
@@ -24,10 +24,20 @@ $background-color_3: rgb(45, 45, 45);
 	border-radius: 15px;
 }
 .inner-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	height: 300px;
 	width: 300px;
 	background-color: $background-color_3;
 	border-radius: 15px;
+}
+.drag-div {
+    height: 250px;
+    width: 250px;
+    border-style: dashed;
+    border-color: $background-color_2;
+    border-width: 3px;
 }
 .default-div {
 	height: 1000px;
