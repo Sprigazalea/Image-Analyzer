@@ -1,4 +1,4 @@
-import './MainContent.css'
+import './index.css'
 
 function MainContent() {
     return (

@@ -1,4 +1,4 @@
-import './SideContent.css'
+import './index.css'
 
 function SideContent() {
     return (
