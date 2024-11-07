@@ -13,9 +13,9 @@ $background-color_3: rgb(45, 45, 45);
 }
 .display-div {
 	display: flex;
-	gap: 25px;
+	gap: 20px;
 	justify-content: center;
-	padding-top: 25px;
+	padding-top: 10px;
 }
 .default-side-div {
 	height: 600px;
@@ -38,6 +38,9 @@ $background-color_3: rgb(45, 45, 45);
     border-style: dashed;
     border-color: $background-color_2;
     border-width: 3px;
+    &:hover {
+        background-color: $background-color_2;
+    }
 }
 .default-div {
 	height: 1000px;

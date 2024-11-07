@@ -11,11 +11,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 25px;
+  gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 25px;
+  padding-top: 10px;
 }
 
 .default-side-div {
@@ -47,6 +47,10 @@
   border-style: dashed;
   border-color: #464646;
   border-width: 3px;
+}
+
+.drag-div:hover {
+  background-color: #464646;
 }
 
 .default-div {
