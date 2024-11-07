@@ -1,0 +1,37 @@
+$color_1: rgba(255, 255, 255, 0.87);
+$background-color_1: rgb(22, 31, 46);
+$background-color_2: rgb(61, 61, 61);
+$background-color_3: rgb(45, 45, 45);
+
+&:root {
+	color: $color_1;
+	background-color: $background-color_1;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.display-div {
+	display: flex;
+	gap: 25px;
+	justify-content: center;
+	padding-top: 25px;
+}
+.default-side-div {
+	height: 600px;
+	width: 300px;
+	background-color: $background-color_2;
+	border-radius: 15px;
+}
+.inner-div {
+	height: 300px;
+	width: 300px;
+	background-color: $background-color_3;
+	border-radius: 15px;
+}
+.default-div {
+	height: 1000px;
+	width: 600px;
+	background-color: $background-color_3;
+	border-radius: 15px;
+}
