@@ -55,7 +55,7 @@
   height: 250px;
   width: 250px;
   border-style: dashed;
-  border-color: #505050;
+  border-color: white;
   border-width: 3px;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .arrow-icon {
-  color: #505050;
+  color: white;
   font-size: 75px;
 }
 
