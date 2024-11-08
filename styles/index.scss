@@ -1,8 +1,9 @@
 $color_1: rgba(255, 255, 255, 0.87);
 $background-color_1: rgb(22, 31, 46);
-$background-color_2: rgb(70, 70, 70);
-$background-color_3: rgb(45, 45, 45);
-$background-color_4: rgb(30, 30, 30);
+$background-color_2: rgb(40, 40, 40);
+$background-color_3: rgb(30, 30, 30);
+$background-color_4: rgb(10, 10, 10);
+$background_color_5: rgb(80, 80, 80);
 
 :root {
     font-family: Helvetica, Arial, sans-serif;
@@ -41,7 +42,7 @@ $background-color_4: rgb(30, 30, 30);
     height: 250px;
     width: 250px;
     border-style: dashed;
-    border-color: $background-color_2;
+    border-color: $background-color_5;
     border-width: 3px;
 }
 .highlight-div {
@@ -51,17 +52,20 @@ $background-color_4: rgb(30, 30, 30);
     height: 250px;
     width: 255px;
     &:hover {
-        background-color: $background-color_2;
+        background-color: $background-color_5;
         .arrow-icon {
             color: $background-color_3;
         }
     }
 }
 .arrow-icon {
-    color: $background-color_2;
+    color: $background-color_5;
     font-size: 75px;
 }
 .side-options {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
     list-style-type: none;
 }
 .default-div {
