@@ -33,6 +33,9 @@ $background-color_3: rgb(45, 45, 45);
 	border-radius: 15px;
 }
 .drag-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 250px;
     width: 250px;
     border-style: dashed;
