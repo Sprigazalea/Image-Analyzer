@@ -1,5 +1,7 @@
 import '/styles/index.css'
 
+// implement tiptap rich text editor here
+
 function MainContent() {
     return (
         <>
