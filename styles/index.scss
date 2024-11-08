@@ -60,6 +60,9 @@ $background-color_4: rgb(30, 30, 30);
     color: $background-color_2;
     font-size: 75px;
 }
+.side-options {
+    list-style-type: none;
+}
 .default-div {
     display: flex;
     justify-content: center;

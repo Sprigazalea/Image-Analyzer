@@ -85,6 +85,10 @@
   font-size: 75px;
 }
 
+.side-options {
+  list-style-type: none;
+}
+
 .default-div {
   display: -webkit-box;
   display: -ms-flexbox;
