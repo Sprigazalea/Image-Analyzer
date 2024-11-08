@@ -43,7 +43,14 @@ $background-color_3: rgb(45, 45, 45);
     border-width: 3px;
     &:hover {
         background-color: $background-color_2;
+        .arrow-icon {
+            color: $background-color_3;
+        }
     }
+}
+.arrow-icon {
+    color: $background-color_2;
+    font-size: 55px;
 }
 .default-div {
 	height: 1000px;
