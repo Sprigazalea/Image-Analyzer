@@ -53,8 +53,15 @@ $background-color_3: rgb(45, 45, 45);
     font-size: 55px;
 }
 .default-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	height: 1000px;
 	width: 600px;
 	background-color: $background-color_3;
 	border-radius: 15px;
+}
+input {
+    border: none;
+    padding: 0 0 300px 0;
 }

@@ -72,9 +72,23 @@
 }
 
 .default-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 1000px;
   width: 600px;
   background-color: #2d2d2d;
   border-radius: 15px;
+}
+
+input {
+  border: none;
+  padding: 0 0 300px 0;
 }
 /*# sourceMappingURL=index.css.map */

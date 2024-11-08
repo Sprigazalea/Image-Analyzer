@@ -3,7 +3,9 @@ import '/styles/index.css'
 function MainContent() {
     return (
         <>
-            <div className='default-div'></div>
+            <div className='default-div'>
+                <input></input>
+            </div>
         </>
     )
 }
