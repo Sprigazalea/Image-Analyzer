@@ -87,9 +87,10 @@
   border-radius: 15px;
 }
 
-input {
+textarea {
   background-color: #464646;
   border: none;
-  padding: 0 390px 950px 0;
+  height: 800px;
+  width: 100px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -4,7 +4,7 @@ function MainContent() {
     return (
         <>
             <div className='default-div'>
-                <input></input>
+                <textarea></textarea>
             </div>
         </>
     )
