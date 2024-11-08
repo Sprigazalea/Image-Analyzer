@@ -7,7 +7,9 @@ function SideContent() {
         <>
         <div className="default-side-div">
             <div className='inner-div'>
-                <div className='drag-div'><FontAwesomeIcon icon={faDownLong} className='arrow-icon'/></div>
+                <div className='drag-div'>
+                    <div className='highlight-div'><FontAwesomeIcon icon={faDownLong} className='arrow-icon'/></div>
+                </div>
             </div>
         </div>
         </>

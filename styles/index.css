@@ -58,11 +58,25 @@
   border-width: 3px;
 }
 
-.drag-div:hover {
+.highlight-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+  width: 255px;
+}
+
+.highlight-div:hover {
   background-color: #464646;
 }
 
-.drag-div:hover .arrow-icon {
+.highlight-div:hover .arrow-icon {
   color: #2d2d2d;
 }
 
