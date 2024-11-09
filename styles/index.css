@@ -24,6 +24,7 @@
   width: 300px;
   background-color: #282828;
   border-radius: 15px;
+  border: 1px solid cyan;
 }
 
 .inner-div {
@@ -112,6 +113,7 @@
   width: 600px;
   background-color: #1e1e1e;
   border-radius: 15px;
+  border: 1px solid cyan;
 }
 
 textarea {

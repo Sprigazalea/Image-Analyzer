@@ -25,6 +25,7 @@ $background_color_5: rgb(80, 80, 80);
 	width: 300px;
 	background-color: $background-color_2;
 	border-radius: 15px;
+    border: 1px solid cyan;
 }
 .inner-div {
     display: flex;
@@ -76,6 +77,7 @@ $background_color_5: rgb(80, 80, 80);
 	width: 600px;
 	background-color: $background-color_3;
 	border-radius: 15px;
+    border: 1px solid cyan;
 }
 textarea {
     background-color: $background-color_4;
