@@ -13,13 +13,13 @@ function SideContent() {
                     </div>
                 </div>
             </div>
-            <ul className='side-options'>
-                <li>FAQ</li>
-                <li>Title</li>
-                <li>Credits</li>
-                <li>Compatibility</li>
-                <li>Export</li>
-            </ul>
+            <div className='side-options'>
+                <a>FAQ</a>
+                <a>Title</a>
+                <a>Credits</a>
+                <a>Compatibility</a>
+                <a>Export</a>
+            </div>
         </div>
         </>
     )
