@@ -1,4 +1,5 @@
-import '/styles/index.css'
+import '/styles/index.css';
+import Test from './Test.jsx';
 
 // implement tiptap rich text editor here
 
@@ -6,7 +7,7 @@ function MainContent() {
     return (
         <>
             <div className='default-div'>
-                <textarea></textarea>
+                <Test />
             </div>
         </>
     )
