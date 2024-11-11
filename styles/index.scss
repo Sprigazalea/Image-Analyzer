@@ -68,6 +68,11 @@ $background_color_5: rgb(80, 80, 80);
     flex-direction: column;
     font-size: 2rem;
     list-style-type: none;
+    > li {
+        &:hover{
+            background-color: white;
+        }
+    }
 }
 .default-div {
     display: flex;

@@ -99,6 +99,10 @@
   list-style-type: none;
 }
 
+.side-options > li:hover {
+  background-color: white;
+}
+
 .default-div {
   display: -webkit-box;
   display: -ms-flexbox;
