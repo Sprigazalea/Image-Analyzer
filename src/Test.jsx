@@ -2,6 +2,7 @@ import "@blocknote/core/fonts/inter.css";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 import { useCreateBlockNote } from "@blocknote/react";
+import '/styles/index.css';
 
 export default function test() {
     // Creates a new editor instance.
