@@ -69,8 +69,11 @@ $background_color_5: rgb(80, 80, 80);
     font-size: 2rem;
     list-style-type: none;
     > a {
+        padding-left: 20px;
+        padding-top: 9px;
+        padding-bottom: 9px;
         &:hover{
-            background-color: white;
+            background-color: $background-color_4;
         }
     }
 }
