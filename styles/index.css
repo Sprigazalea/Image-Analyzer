@@ -99,7 +99,7 @@
   list-style-type: none;
 }
 
-.side-options > li:hover {
+.side-options > a:hover {
   background-color: white;
 }
 
