@@ -116,9 +116,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 1000px;
   width: 600px;
   background-color: #1e1e1e;
@@ -136,9 +133,10 @@ textarea {
 
 /* Base theme */
 .bn-container[data-theming-css-variables][data-color-scheme] {
-  --bn-colors-editor-text: #222222;
-  --bn-colors-editor-background: #ffeeee;
+  --bn-colors-editor-text: white;
+  --bn-colors-editor-background: #000;
   height: 800px;
   width: 575px;
+  padding-top: 12px;
 }
 /*# sourceMappingURL=index.css.map */

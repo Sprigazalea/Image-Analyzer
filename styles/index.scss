@@ -80,7 +80,6 @@ $background_color_5: rgb(80, 80, 80);
 .default-div {
     display: flex;
     justify-content: center;
-    align-items: center;
 	height: 1000px;
 	width: 600px;
 	background-color: $background-color_3;
@@ -97,9 +96,10 @@ textarea {
 
 /* Base theme */
 .bn-container[data-theming-css-variables][data-color-scheme] {
-    --bn-colors-editor-text: #222222;
-    --bn-colors-editor-background: #ffeeee;
+    --bn-colors-editor-text: white;
+    --bn-colors-editor-background: #000;
     height: 800px;
     width: 575px;
+    padding-top: 12px;
 }
 
