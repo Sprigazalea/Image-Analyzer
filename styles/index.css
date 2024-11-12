@@ -133,4 +133,12 @@ textarea {
   height: 960px;
   width: 560px;
 }
+
+/* Base theme */
+.bn-container[data-theming-css-variables][data-color-scheme] {
+  --bn-colors-editor-text: #222222;
+  --bn-colors-editor-background: #ffeeee;
+  height: 800px;
+  width: 575px;
+}
 /*# sourceMappingURL=index.css.map */
