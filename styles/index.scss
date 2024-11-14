@@ -89,7 +89,8 @@ $background_color_5: rgb(80, 80, 80);
 }
 textarea {
     font-family: Hack, monospace;
-    background-image: linear-gradient($background-color_2 50%, $background-color_4 50%);
+    background-image: linear-gradient($background-color_3 50%, $background-color_4 50%);
+    background-size: 100% 3rem;
     border: none;
     color: white;
     height: 960px;
