@@ -80,6 +80,7 @@ $background_color_5: rgb(80, 80, 80);
 .default-div {
     display: flex;
     justify-content: center;
+    align-items: center;
 	height: 1000px;
 	width: 600px;
 	background-color: $background-color_3;
@@ -92,6 +93,7 @@ textarea {
     color: white;
     height: 960px;
     width: 560px;
+    resize: none;
 }
 
 /* Base theme */
