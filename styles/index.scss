@@ -94,15 +94,6 @@ textarea {
     color: white;
     height: 960px;
     width: 560px;
+    font-size: 1.5rem;
     resize: none;
 }
-
-/* Base theme */
-.bn-container[data-theming-css-variables][data-color-scheme] {
-    --bn-colors-editor-text: white;
-    --bn-colors-editor-background: #000;
-    height: 800px;
-    width: 575px;
-    padding-top: 12px;
-}
-
