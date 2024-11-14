@@ -4,6 +4,7 @@ $background-color_2: rgb(40, 40, 40);
 $background-color_3: rgb(30, 30, 30);
 $background-color_4: rgb(10, 10, 10);
 $background_color_5: rgb(80, 80, 80);
+$background_color_6: rgb(38, 38, 38);
 
 :root {
     font-family: Helvetica, Arial, sans-serif;
@@ -89,7 +90,7 @@ $background_color_5: rgb(80, 80, 80);
 }
 textarea {
     font-family: Hack, monospace;
-    background-image: linear-gradient($background-color_3 50%, $background-color_4 50%);
+    background-image: linear-gradient($background-color_6 50%, $background-color_3 50%);
     background-size: 100% 3rem;
     border: none;
     color: white;
