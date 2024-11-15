@@ -82,6 +82,10 @@
   color: #1e1e1e;
 }
 
+.image-preview {
+  position: absolute;
+}
+
 .arrow-icon {
   color: white;
   font-size: 75px;

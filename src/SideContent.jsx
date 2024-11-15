@@ -18,7 +18,7 @@ function SideContent() {
             <div className='inner-div'>
                 <div className='drag-div'>
                     <div className='highlight-div'>
-                        <image src=""></image>
+                        <input className='image-preview' src=""></input>
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
                 </div>
