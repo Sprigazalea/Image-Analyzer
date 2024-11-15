@@ -22,6 +22,7 @@ function SideContent() {
             <div className='inner-div'>
                 <div className='drag-div'>
                     <div className='highlight-div'>
+                        <img src=''></img>
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
                 </div>
