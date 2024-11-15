@@ -1,9 +1,13 @@
 import '/styles/index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
 
-function acceptImage() {
-    const image = document.getElementsByClassName("highlight-div").files[0];
+function acceptImage(ev) {
+    const [image, setImage] = useState(null)
+    // Prevent browser from opening file when dropped
+    ev.preventDefault();
+    setImage(document.getElementsByClassName("highlight-div").files[0]);
     const reader = new FileReader();
     reader.onload = function(e) {
         document.getElementById().src = e.target.value;
@@ -18,7 +22,6 @@ function SideContent() {
             <div className='inner-div'>
                 <div className='drag-div'>
                     <div className='highlight-div'>
-                        <input className='image-preview' src=""></input>
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
                 </div>
