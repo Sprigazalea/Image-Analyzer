@@ -15,6 +15,10 @@ function AcceptImage(ev) {
     reader.readAsDataURL(image);
 }
 
+// may need separate functions for drag as well as drop?
+// currently the AcceptImage function is bit off a little bit of both ideas
+// this should be decided before i continue further.
+
 function SideContent() {
     return (
         <>
