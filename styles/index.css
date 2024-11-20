@@ -58,6 +58,7 @@
   border-style: dashed;
   border-color: white;
   border-width: 3px;
+  background-color: inherit;
 }
 
 .highlight-div {
@@ -70,8 +71,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 250px;
-  width: 255px;
+  height: 237px;
+  width: 250px;
 }
 
 .highlight-div:hover {

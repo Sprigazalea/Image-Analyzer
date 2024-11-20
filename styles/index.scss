@@ -46,13 +46,14 @@ $background_color_6: rgb(38, 38, 38);
     border-style: dashed;
     border-color: white;
     border-width: 3px;
+    background-color: inherit;
 }
 .highlight-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px;
-    width: 255px;
+    height: 237px;
+    width: 250px;
     &:hover {
         background-color: $background-color_5;
         .arrow-icon {
