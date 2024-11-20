@@ -19,6 +19,12 @@ function AcceptImage(ev) {
 // currently the AcceptImage function is bit off a little bit of both ideas
 // this should be decided before i continue further.
 
+// i may have misunderstood what the drag and drop api is
+// i should be able to get away with smth like, clicking on the
+// drag-div will bring up a file selector.
+// i believe FileReader api is what i will need to use after
+// the image is sent.
+
 function SideContent() {
     return (
         <>
@@ -27,8 +33,7 @@ function SideContent() {
                 <div className='drag-div'>
                     <div className='highlight-div'>
                         <img className='image-preview' 
-                        src=''
-                        onChange={AcceptImage}
+                             src=''
                         ></img>
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
