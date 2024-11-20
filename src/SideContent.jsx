@@ -15,6 +15,11 @@ function AcceptImage(ev) {
     reader.readAsDataURL(image);
 }
 
+function Test() {
+    const [imagePreview, setImagePreview] = useState(null);
+    const uploadButton = document.getElement
+}
+
 // may need separate functions for drag as well as drop?
 // currently the AcceptImage function is bit off a little bit of both ideas
 // this should be decided before i continue further.
@@ -38,7 +43,7 @@ function SideContent() {
         <>
         <div className="default-side-div">
             <div className='inner-div'>
-                <button className='drag-div'>
+                <button className='upload-button'>
                     <div className='highlight-div'>
                         <img className='image-preview' 
                              src=''
