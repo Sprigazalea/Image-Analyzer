@@ -47,6 +47,11 @@ $background_color_6: rgb(38, 38, 38);
     border-color: white;
     border-width: 3px;
     background-color: inherit;
+    &:active {
+        .highlight-div {
+            background-color: $background-color_3;
+        }
+    }
 }
 .highlight-div {
     display: flex;

@@ -17,7 +17,8 @@ function AcceptImage(ev) {
 
 function Test() {
     const [imagePreview, setImagePreview] = useState(null);
-    const uploadButton = document.getElement
+    const uploadButton = document.getElementsByClassName("upload-button")
+    
 }
 
 // may need separate functions for drag as well as drop?
