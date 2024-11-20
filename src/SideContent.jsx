@@ -25,19 +25,27 @@ function AcceptImage(ev) {
 // i believe FileReader api is what i will need to use after
 // the image is sent.
 
+// i need to find an appropriate input type in order to make it
+// look close to how the drag-div behaves, with changing the
+// background color on hover. 
+
+// i might be getting caught up on the "correct" way to do this,
+// when i could find a solution that works and then work from there.
+// a button element could be fine here possibly
+
 function SideContent() {
     return (
         <>
         <div className="default-side-div">
             <div className='inner-div'>
-                <div className='drag-div'>
+                <button className='drag-div'>
                     <div className='highlight-div'>
                         <img className='image-preview' 
                              src=''
                         ></img>
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
-                </div>
+                </button>
             </div>
             <div className='side-options'>
                 <a>FAQ</a>
