@@ -15,10 +15,10 @@ function AcceptImage(ev) {
     reader.readAsDataURL(image);
 }
 
-function Test() {
-    const [imagePreview, setImagePreview] = useState(null);
-    const uploadButton = document.getElementsByClassName("upload-button")
-    
+function test() {
+    const uploadButton = document.getElementsByClassName("upload-button");
+    uploadButton.type = 'file';
+    uploadButton.click();
 }
 
 // may need separate functions for drag as well as drop?
@@ -39,12 +39,16 @@ function Test() {
 // when i could find a solution that works and then work from there.
 // a button element could be fine here possibly
 
+// file dialog is not opening despite seemingly doing everything i
+// need. all the examples use the input tag instead of button, so 
+// maybe i *do* need to use input instead of button?
+
 function SideContent() {
     return (
         <>
         <div className="default-side-div">
             <div className='inner-div'>
-                <button className='upload-button'>
+                <button className='upload-button' type='file' onClick={test}>
                     <div className='highlight-div'>
                         <img className='image-preview' 
                              src=''
