@@ -185,4 +185,20 @@ textarea {
   display: flex;
   gap: 1rem;
 }
+
+.modal {
+  position: absolute;
+  z-index: 99;
+  color: black;
+}
+
+.modal-div {
+  position: fixed;
+  inset: 0px;
+}
+
+.modal-panel {
+  background-color: white;
+  max-width: 300px;
+}
 /*# sourceMappingURL=index.css.map */

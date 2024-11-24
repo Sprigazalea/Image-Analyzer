@@ -73,11 +73,14 @@ function SideContent() {
                 <a>Export</a>
             </div>
         </div>
-        <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-            <DialogPanel>
-                <DialogTitle>Upload Image</DialogTitle>
-                <Description>test</Description>
-            </DialogPanel>
+        <Dialog open={isOpen} onClose={() => setIsOpen(false)} className='modal'>
+            <div className='modal-div'>
+                <DialogPanel className='modal-panel'>
+                    <DialogTitle>Upload Image</DialogTitle>
+                    <Description>test</Description>
+                </DialogPanel>
+            </div>
+            
         </Dialog>
         </>
     )
