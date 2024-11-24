@@ -63,7 +63,7 @@ function SideContent() {
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
                 </button>
-                <input type='file'></input>
+                <input hidden='true' type='file'></input>
             </div>
             <div className='side-options'>
                 <a>FAQ</a>
@@ -73,18 +73,8 @@ function SideContent() {
                 <a>Export</a>
             </div>
         </div>
-        <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="test1">
-                <div className="test2">
-                    <DialogPanel className="test3">
-                        <DialogTitle className="font-bold">Deactivate account</DialogTitle>
-                        <Description>This will permanently deactivate your account</Description>
-                        <p>Are you sure you want to deactivate your account? All of your data will be permanently removed.</p>
-                        <div className="test4">
-                            <button onClick={() => setIsOpen(false)}>Cancel</button>
-                            <button onClick={() => setIsOpen(false)}>Deactivate</button>
-                        </div>
-                    </DialogPanel>
-                </div>
+        <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+
         </Dialog>
         </>
     )
