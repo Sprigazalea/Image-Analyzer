@@ -1,4 +1,5 @@
 import '/styles/index.css'
+import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
@@ -48,11 +49,13 @@ function test() {
 // highlight div is clicked, it will open a modal to select an image
 
 function SideContent() {
+    let [isOpen, setIsOpen] = useState(false);
+
     return (
         <>
         <div className="default-side-div">
             <div className='inner-div'>
-                <button className='upload-button' type='file' onClick={test}>
+                <button className='upload-button' onClick={() => setIsOpen(true)}>
                     <div className='highlight-div'>
                         <img className='image-preview' 
                              src=''
@@ -70,6 +73,19 @@ function SideContent() {
                 <a>Export</a>
             </div>
         </div>
+        <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="test1">
+                <div className="test2">
+                    <DialogPanel className="test3">
+                        <DialogTitle className="font-bold">Deactivate account</DialogTitle>
+                        <Description>This will permanently deactivate your account</Description>
+                        <p>Are you sure you want to deactivate your account? All of your data will be permanently removed.</p>
+                        <div className="test4">
+                            <button onClick={() => setIsOpen(false)}>Cancel</button>
+                            <button onClick={() => setIsOpen(false)}>Deactivate</button>
+                        </div>
+                    </DialogPanel>
+                </div>
+        </Dialog>
         </>
     )
 }

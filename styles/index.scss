@@ -111,3 +111,32 @@ textarea {
 }
 
 //maybe push text up a few pixels to center the text along the "lines"?
+
+.test1 {
+    position: relative;
+    z-index: 50;
+    color: black;
+}
+
+.test2 {
+    position: fixed;
+    inset: 0px;
+    display: flex;
+    width: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.test3 {
+    max-width: 32rem;
+    margin-top: 1rem;
+    border-width: 1px;
+    background-color: rgb(255, 255, 255);
+    padding: 3rem;
+}
+
+.test4 {
+    display: flex;
+    gap: 1rem;
+}
