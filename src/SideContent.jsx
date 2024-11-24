@@ -74,7 +74,10 @@ function SideContent() {
             </div>
         </div>
         <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-
+            <DialogPanel>
+                <DialogTitle>Upload Image</DialogTitle>
+                <Description>test</Description>
+            </DialogPanel>
         </Dialog>
         </>
     )
