@@ -150,9 +150,13 @@ textarea {
 .modal-div {
     position: fixed;
     inset: 0px; // inset allows the max-width to apply it seems?
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
 }
 
 .modal-panel {
     background-color: white;
-    max-width: 300px;
+    max-width: 500px;
+    padding: 10px;
 }

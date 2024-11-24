@@ -80,7 +80,6 @@ function SideContent() {
                     <Description>test</Description>
                 </DialogPanel>
             </div>
-            
         </Dialog>
         </>
     )
