@@ -26,7 +26,8 @@ $background_color_6: rgb(38, 38, 38);
 	width: 300px;
 	background-color: $background-color_2;
 	border-radius: 15px;
-    border: 1px solid cyan;
+    border: 1px solid black;
+    box-shadow: 0 0 5px white, 0 0 8px cyan;
 }
 .inner-div {
     display: flex;
