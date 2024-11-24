@@ -135,7 +135,9 @@
   width: 600px;
   background-color: #1e1e1e;
   border-radius: 15px;
-  border: 1px solid cyan;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 0 5px white, 0 0 8px cyan;
+          box-shadow: 0 0 5px white, 0 0 8px cyan;
 }
 
 textarea {
