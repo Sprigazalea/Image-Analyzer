@@ -43,6 +43,10 @@ function test() {
 // need. all the examples use the input tag instead of button, so 
 // maybe i *do* need to use input instead of button?
 
+// input is definitely what i need. i was reminded modals exist so
+// i will leave the look of the website as is, but then when the 
+// highlight div is clicked, it will open a modal to select an image
+
 function SideContent() {
     return (
         <>
@@ -56,6 +60,7 @@ function SideContent() {
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
                 </button>
+                <input type='file'></input>
             </div>
             <div className='side-options'>
                 <a>FAQ</a>
