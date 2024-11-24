@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   color: rgba(255, 255, 255, 0.87);
   background-color: #161f2e;
   font-synthesis: none;
@@ -112,6 +112,7 @@
   padding-left: 35px;
   padding-top: 14px;
   padding-bottom: 14px;
+  font-weight: 600;
 }
 
 .side-options > a:hover {
