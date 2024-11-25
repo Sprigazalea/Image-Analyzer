@@ -77,7 +77,9 @@ function SideContent() {
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <DialogTitle>Upload Image</DialogTitle>
-                    <Description>test</Description>
+                    <div className='modal-box'></div>
+                    <button>Submit</button>
+                    <button>Cancel</button>
                 </DialogPanel>
             </div>
         </Dialog>

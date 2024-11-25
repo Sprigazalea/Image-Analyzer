@@ -160,5 +160,13 @@ textarea {
 .modal-panel {
     background-color: white;
     max-width: 500px;
-    padding: 10px;
+    padding: 15px;
+}
+
+.modal-box {
+    width: 500px;
+    height: 300px;
+    border-style: dashed;
+    border-color: black;
+    border-width: 3px;
 }
