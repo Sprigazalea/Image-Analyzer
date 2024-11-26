@@ -1,7 +1,7 @@
 import '/styles/index.css'
 import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownLong, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "motion/react"
 import { useState } from 'react'
 
@@ -107,7 +107,7 @@ function SideContent() {
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <DialogTitle>Upload Image</DialogTitle>
-                    <div className='modal-box'></div>
+                    <div className='modal-box'><FontAwesomeIcon icon={faFileImage} /></div>
                     <button>Submit</button>
                 </DialogPanel>
             </div>
