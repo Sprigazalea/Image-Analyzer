@@ -107,7 +107,9 @@ function SideContent() {
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <DialogTitle>Upload Image</DialogTitle>
-                    <div className='modal-box'><FontAwesomeIcon icon={faFileImage} className='image-icon' /></div>
+                    <div className='modal-box'>
+                        <FontAwesomeIcon icon={faFileImage} className='image-icon' />
+                    </div>
                     <button>Submit</button>
                 </DialogPanel>
             </div>
