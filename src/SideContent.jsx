@@ -74,9 +74,15 @@ function SideContent() {
     // the best option so i have to consider if its the right
     // choice or not.
 
+    // i could maybe put a gap between each div, and then 
+    // animate them? i will have to test that.
+
+    // it seemed like that worked! the spacing is a bit weird but
+    // thats an issue on my end. i will keep fiddling with it
+
     return (
         <>
-        <motion.div animate={{ x: 0 }} className="default-side-div">
+        <motion.div animate={{ x: 100 }} className="default-side-div">
             <div className='inner-div'>
                 <button className='upload-button' onClick={() => {setIsOpen(true); toggleDim()}}>
                     <div className='highlight-div'>

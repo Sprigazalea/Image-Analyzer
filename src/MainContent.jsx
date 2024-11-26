@@ -1,14 +1,15 @@
 import '/styles/index.css';
 import Test from './Test.jsx';
+import { motion } from "motion/react"
 
 // implement tiptap rich text editor here
 
 function MainContent() {
     return (
         <>
-            <div className='default-div'>
+            <motion.div animate={{ x: -100 }}className='default-div'>
                 <Test />
-            </div>
+            </motion.div>
         </>
     )
 }
