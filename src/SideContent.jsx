@@ -50,12 +50,26 @@ function test() {
 
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
+    let [dim, setDim] = useState("hidden");
+
+    function toggleDim() {
+        const dimDiv = document.getElementById("dim-div");
+        if (dimDiv.className === "dark") {
+            dimDiv.className = "hidden"
+            console.log(dimDiv.className)
+        } else if (dimDiv.className === "hidden") {
+            dimDiv.className = "dark"
+            console.log(dimDiv.className)
+        } else {
+            return;
+        }
+    }
 
     return (
         <>
         <div className="default-side-div">
             <div className='inner-div'>
-                <button className='upload-button' onClick={() => setIsOpen(true)}>
+                <button className='upload-button' onClick={() => {setIsOpen(true); toggleDim()}}>
                     <div className='highlight-div'>
                         <img className='image-preview' 
                              src=''
@@ -82,7 +96,7 @@ function SideContent() {
                 </DialogPanel>
             </div>
         </Dialog>
-        <div className="dark"></div>
+        <div id="dim-div" className={dim}></div>
         </>
     )
 }
