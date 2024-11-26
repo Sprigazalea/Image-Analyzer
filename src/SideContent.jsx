@@ -96,18 +96,18 @@ function SideContent() {
                 <input hidden='true' type='file'></input>
             </div>
             <div className='side-options'>
-                <a>FAQ <FontAwesomeIcon icon={faAngleRight} /></a>
-                <a>Title <FontAwesomeIcon icon={faAngleRight} /></a>
-                <a>Credits <FontAwesomeIcon icon={faAngleRight} /></a>
-                <a>Compatibility <FontAwesomeIcon icon={faAngleRight} /></a>
-                <a>Export <FontAwesomeIcon icon={faAngleRight} /></a>
+                <a>FAQ <FontAwesomeIcon icon={faAngleRight}/></a>
+                <a>Title <FontAwesomeIcon icon={faAngleRight}/></a>
+                <a>Credits <FontAwesomeIcon icon={faAngleRight}/></a>
+                <a>Compatibility <FontAwesomeIcon icon={faAngleRight}/></a>
+                <a>Export <FontAwesomeIcon icon={faAngleRight}/></a>
             </div>
         </motion.div>
         <Dialog open={isOpen} onClose={() => {setIsOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <DialogTitle>Upload Image</DialogTitle>
-                    <div className='modal-box'><FontAwesomeIcon icon={faFileImage} /></div>
+                    <div className='modal-box'><FontAwesomeIcon icon={faFileImage} className='image-icon' /></div>
                     <button>Submit</button>
                 </DialogPanel>
             </div>
