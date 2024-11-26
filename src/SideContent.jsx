@@ -66,9 +66,17 @@ function SideContent() {
         }
     }
 
+    // the motion effect below will translate based on the x value.
+    // for it to work properly though, i have to position it to its
+    // position before its moved. this doesnt work here because
+    // a flex-box is there. i can fix this by removing flex
+    // and positioning things like they are now. it may not be
+    // the best option so i have to consider if its the right
+    // choice or not.
+
     return (
         <>
-        <motion.div animate={{ x: 100 }}className="default-side-div">
+        <motion.div animate={{ x: 0 }} className="default-side-div">
             <div className='inner-div'>
                 <button className='upload-button' onClick={() => {setIsOpen(true); toggleDim()}}>
                     <div className='highlight-div'>
