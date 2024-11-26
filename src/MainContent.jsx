@@ -7,7 +7,7 @@ import { motion } from "motion/react"
 function MainContent() {
     return (
         <>
-            <motion.div animate={{ x: -100 }}className='default-div'>
+            <motion.div animate={{ x: -90 }}className='default-div'>
                 <Test />
             </motion.div>
         </>
