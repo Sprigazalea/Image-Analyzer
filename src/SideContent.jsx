@@ -71,8 +71,9 @@ function SideContent() {
             <div className='inner-div'>
                 <button className='upload-button' onClick={() => {setIsOpen(true); toggleDim()}}>
                     <div className='highlight-div'>
-                        <img className='image-preview' 
-                             src=''
+                        <img 
+                            className='image-preview' 
+                            src=''
                         ></img>
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
