@@ -2,6 +2,7 @@ import '/styles/index.css'
 import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong } from '@fortawesome/free-solid-svg-icons'
+import { motion } from "motion/react"
 import { useState } from 'react'
 
 function AcceptImage(ev) {
