@@ -88,7 +88,7 @@ function SideContent() {
                 <a>Export</a>
             </div>
         </div>
-        <Dialog open={isOpen} onClose={() => setIsOpen(false)} className='modal'>
+        <Dialog open={isOpen} onClose={() => {setIsOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <DialogTitle>Upload Image</DialogTitle>
