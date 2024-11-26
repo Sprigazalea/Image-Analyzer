@@ -153,43 +153,6 @@ textarea {
   resize: none;
 }
 
-.test1 {
-  position: relative;
-  z-index: 50;
-  color: black;
-}
-
-.test2 {
-  position: fixed;
-  inset: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1rem;
-}
-
-.test3 {
-  max-width: 32rem;
-  margin-top: 1rem;
-  border-width: 1px;
-  background-color: white;
-  padding: 3rem;
-}
-
-.test4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-}
-
 .modal {
   position: absolute;
   z-index: 99;
