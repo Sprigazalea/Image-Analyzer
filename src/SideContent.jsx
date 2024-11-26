@@ -82,6 +82,7 @@ function SideContent() {
                 </DialogPanel>
             </div>
         </Dialog>
+        <div className="dark"></div>
         </>
     )
 }
