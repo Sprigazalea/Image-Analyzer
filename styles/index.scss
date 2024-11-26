@@ -171,3 +171,14 @@ textarea {
     border-color: black;
     border-width: 3px;
 }
+
+.dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.5;
+    background-color: black;
+    z-index: 100;
+}
