@@ -1,7 +1,7 @@
 import '/styles/index.css'
 import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownLong } from '@fortawesome/free-solid-svg-icons'
+import { faDownLong, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "motion/react"
 import { useState } from 'react'
 
@@ -96,11 +96,11 @@ function SideContent() {
                 <input hidden='true' type='file'></input>
             </div>
             <div className='side-options'>
-                <a>FAQ</a>
-                <a>Title</a>
-                <a>Credits</a>
-                <a>Compatibility</a>
-                <a>Export</a>
+                <a>FAQ <FontAwesomeIcon icon={faAngleRight} /></a>
+                <a>Title <FontAwesomeIcon icon={faAngleRight} /></a>
+                <a>Credits <FontAwesomeIcon icon={faAngleRight} /></a>
+                <a>Compatibility <FontAwesomeIcon icon={faAngleRight} /></a>
+                <a>Export <FontAwesomeIcon icon={faAngleRight} /></a>
             </div>
         </motion.div>
         <Dialog open={isOpen} onClose={() => {setIsOpen(false); toggleDim()}} className='modal'>
