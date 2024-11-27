@@ -98,7 +98,7 @@ function SideContent() {
                     <DialogTitle>Upload Image</DialogTitle>
                     <div className='modal-box'>
                         <FontAwesomeIcon icon={faFileImage} className='image-icon' />
-                        <input type="file" ref={inputFile} style={{display: 'none'}}></input>
+                        <input accept='image/*' type="file" ref={inputFile} style={{display: 'none'}}></input>
                         <button onClick={onButtonClick}>Test</button>
                     </div>
                     <button>Submit</button>
