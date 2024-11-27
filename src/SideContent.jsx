@@ -17,10 +17,6 @@ function AcceptImage(ev) {
     reader.readAsDataURL(image);
 }
 
-function test() {
-
-}
-
 // may need separate functions for drag as well as drop?
 // currently the AcceptImage function is bit off a little bit of both ideas
 // this should be decided before i continue further.
@@ -98,7 +94,7 @@ function SideContent() {
                     <DialogTitle>Upload Image</DialogTitle>
                     <div className='modal-box'>
                         <FontAwesomeIcon icon={faFileImage} className='image-icon' />
-                        <input accept='image/*' type="file" ref={inputFile} style={{display: 'none'}}></input>
+                        <input accept='image/*' onChange={AcceptImage} type="file" ref={inputFile} style={{display: 'none'}}></input>
                         <button onClick={onButtonClick}>Test</button>
                     </div>
                     <button>Submit</button>
