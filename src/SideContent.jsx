@@ -85,26 +85,11 @@ function SideContent() {
                 <input hidden='true' type='file'></input>
             </div>
             <div className='side-options'>
-                <a>
-                    <p>FAQ</p>
-                    <FontAwesomeIcon icon={faAngleRight} className='right-icon'/>
-                </a>
-                <a>
-                    <p>Title</p> 
-                    <FontAwesomeIcon icon={faAngleRight} className='right-icon'/>
-                </a>
-                <a>
-                    <p>Credits</p>
-                    <FontAwesomeIcon icon={faAngleRight} className='right-icon'/>
-                </a>
-                <a>
-                    <p>Compatibility</p>
-                    <FontAwesomeIcon icon={faAngleRight} className='right-icon'/>
-                </a>
-                <a>
-                    <p>Export</p> 
-                    <FontAwesomeIcon icon={faAngleRight} className='right-icon'/>
-                </a>
+                <a><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a><p>Title</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
             </div>
         </motion.div>
         <Dialog open={isOpen} onClose={() => {setIsOpen(false); toggleDim()}} className='modal'>
