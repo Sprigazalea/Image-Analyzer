@@ -7,6 +7,7 @@ import { useState, useRef } from 'react'
 
 function AcceptImage() {
     const [image, setImage] = useState(null);
+    console.log("success!")
 }
 
 // may need separate functions for drag as well as drop?
