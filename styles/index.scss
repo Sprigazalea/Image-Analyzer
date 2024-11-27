@@ -84,12 +84,21 @@ $background_color_6: rgb(38, 38, 38);
     font-size: 1.52rem;
     list-style-type: none;
     > a {
+        display: flex;
+        align-items: center;
         padding-left: 25px;
         padding-top: 14px;
         padding-bottom: 14px;
         font-weight: 600;
         &:hover{
             background-color: $background-color_4;
+        }
+        > p {
+            margin: 0;
+            flex-grow: 1;
+        }
+        > .right-icon {
+            padding-right: 20px;
         }
     }
 }
