@@ -3,7 +3,7 @@ import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "motion/react"
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 function AcceptImage(ev) {
     const [image, setImage] = useState(null);
@@ -18,9 +18,7 @@ function AcceptImage(ev) {
 }
 
 function test() {
-    const uploadButton = document.getElementsByClassName("upload-button");
-    uploadButton.type = 'file';
-    uploadButton.click();
+
 }
 
 // may need separate functions for drag as well as drop?
@@ -52,6 +50,11 @@ function test() {
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
+    const inputFile = useRef(null);
+
+    function onButtonClick() {
+        inputFile.current.click()
+    }
 
     function toggleDim() {
         const dimDiv = document.getElementById("dim-div");
@@ -95,7 +98,8 @@ function SideContent() {
                     <DialogTitle>Upload Image</DialogTitle>
                     <div className='modal-box'>
                         <FontAwesomeIcon icon={faFileImage} className='image-icon' />
-                        
+                        <input type="file" ref={inputFile} style={{display: 'none'}}></input>
+                        <button onClick={onButtonClick}>Test</button>
                     </div>
                     <button>Submit</button>
                 </DialogPanel>
