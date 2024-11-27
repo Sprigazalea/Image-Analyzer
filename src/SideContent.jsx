@@ -5,16 +5,8 @@ import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-s
 import { motion } from "motion/react"
 import { useState, useRef } from 'react'
 
-function AcceptImage(ev) {
+function AcceptImage() {
     const [image, setImage] = useState(null);
-    // Prevent browser from opening file when dropped
-    ev.preventDefault();
-    setImage(document.getElementsByClassName("highlight-div").files[0]);
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        document.getElementsByClassName("image-preview").src = e.target.value;
-    }
-    reader.readAsDataURL(image);
 }
 
 // may need separate functions for drag as well as drop?
@@ -78,7 +70,6 @@ function SideContent() {
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
                     </div>
                 </button>
-                <input hidden='true' type='file'></input>
             </div>
             <div className='side-options'>
                 <a><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
