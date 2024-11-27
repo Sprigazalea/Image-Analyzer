@@ -48,10 +48,8 @@ function SideContent() {
         const dimDiv = document.getElementById("dim-div");
         if (dimDiv.className === "dark") {
             dimDiv.className = "hidden"
-            console.log(dimDiv.className)
         } else if (dimDiv.className === "hidden") {
             dimDiv.className = "dark"
-            console.log(dimDiv.className)
         } else {
             return;
         }
