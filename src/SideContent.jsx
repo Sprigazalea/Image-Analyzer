@@ -66,20 +66,6 @@ function SideContent() {
         }
     }
 
-    // the motion effect below will translate based on the x value.
-    // for it to work properly though, i have to position it to its
-    // position before its moved. this doesnt work here because
-    // a flex-box is there. i can fix this by removing flex
-    // and positioning things like they are now. it may not be
-    // the best option so i have to consider if its the right
-    // choice or not.
-
-    // i could maybe put a gap between each div, and then 
-    // animate them? i will have to test that.
-
-    // it seemed like that worked! the spacing is a bit weird but
-    // thats an issue on my end. i will keep fiddling with it
-
     return (
         <>
         <motion.div animate={{ x: 90 }} className="default-side-div">
