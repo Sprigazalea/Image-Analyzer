@@ -74,4 +74,9 @@ function SideContent() {
 // maincontent can access either of its needed info when 
 // needed, if it works the way i think it works
 
+// a part of the logic in this file might need to be moved
+// to different files for different purposes, maybe split
+// into their own files? not sure yet. but i need to decide
+// now before continuing forward
+
 export default SideContent
