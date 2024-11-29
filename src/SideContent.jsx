@@ -6,7 +6,6 @@ import { motion } from "motion/react"
 import { useState, useRef } from 'react'
 
 function AcceptImage() {
-    const [image, setImage] = useState(null);
     console.log("success!")
 }
 
