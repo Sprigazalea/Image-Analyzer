@@ -69,4 +69,9 @@ function SideContent() {
     )
 }
 
+// i think it will be necessary to do some of the logic of the 
+// image processing in its own file, that way sidecontent and
+// maincontent can access either of its needed info when 
+// needed, if it works the way i think it works
+
 export default SideContent
