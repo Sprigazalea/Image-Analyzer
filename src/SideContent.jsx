@@ -9,32 +9,6 @@ function AcceptImage() {
     console.log("success!")
 }
 
-// may need separate functions for drag as well as drop?
-// currently the AcceptImage function is bit off a little bit of both ideas
-// this should be decided before i continue further.
-
-// i may have misunderstood what the drag and drop api is
-// i should be able to get away with smth like, clicking on the
-// drag-div will bring up a file selector.
-// i believe FileReader api is what i will need to use after
-// the image is sent.
-
-// i need to find an appropriate input type in order to make it
-// look close to how the drag-div behaves, with changing the
-// background color on hover. 
-
-// i might be getting caught up on the "correct" way to do this,
-// when i could find a solution that works and then work from there.
-// a button element could be fine here possibly
-
-// file dialog is not opening despite seemingly doing everything i
-// need. all the examples use the input tag instead of button, so 
-// maybe i *do* need to use input instead of button?
-
-// input is definitely what i need. i was reminded modals exist so
-// i will leave the look of the website as is, but then when the 
-// highlight div is clicked, it will open a modal to select an image
-
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
