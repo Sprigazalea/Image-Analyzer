@@ -10,6 +10,8 @@ function SideContent() {
     let [dim, setDim] = useState("hidden");
     const inputFile = useRef(null);
 
+    const [imageFile, setImageFile] = useState(null)
+
     function onButtonClick() {
         inputFile.current.click()
     }
@@ -39,14 +41,15 @@ function SideContent() {
     }
 
     function SubmitImage() {
-        const file = document.getElementById('image-upload').files[0];
+        setImageFile(document.getElementById('image-upload').files[0])
+        console.log(imageFile)
         const preview = document.getElementsByClassName('image-preview')
         const reader = new FileReader();
 
         reader.onload = r => {
             console.log(r.target.result)
         }
-        reader.readAsDataURL(file)
+        reader.readAsDataURL(imageFile)
     }
 
     return (
@@ -81,9 +84,9 @@ function SideContent() {
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name'></p>
                     </div>
-                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim()}}>Submit</button>
+                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
 
-                    {/* need to create 1. a state that stores the file when it is submitted*/}
+                    {/* need to create 1. a state that stores the file when it is submitted and 2. have filename still display when closing and reopening dialog*/}
                 </DialogPanel>
             </div>
         </Dialog>
