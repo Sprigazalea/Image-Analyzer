@@ -42,6 +42,11 @@ function SideContent() {
         const file = document.getElementById('image-upload').files[0];
         const preview = document.getElementsByClassName('image-preview')
         const reader = new FileReader();
+
+        reader.onload = r => {
+            console.log(r.target.result)
+        }
+        reader.readAsDataURL(file)
     }
 
     return (
@@ -76,7 +81,9 @@ function SideContent() {
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name'></p>
                     </div>
-                    <button id='submit-image'>Submit</button>
+                    <button id='submit-image' onClick={SubmitImage}>Submit</button>
+
+                    {/* need to create 1. a state that stores the file when it is submitted and 2. an action where clicking submit closes the Dialog window */}
                 </DialogPanel>
             </div>
         </Dialog>
