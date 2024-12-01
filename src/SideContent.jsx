@@ -38,6 +38,12 @@ function SideContent() {
         target.innerText = image;
     }
 
+    function SubmitImage() {
+        const file = document.getElementById('image-upload').files[0];
+        const preview = document.getElementsByClassName('image-preview')
+        const reader = new FileReader();
+    }
+
     return (
         <>
         <motion.div animate={{ x: 90 }} className="default-side-div">
