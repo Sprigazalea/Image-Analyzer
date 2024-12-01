@@ -31,7 +31,7 @@ function SideContent() {
         const image = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
 
-        target.innerText = image 
+        target.innerText = image;
     }
 
     return (
@@ -63,7 +63,7 @@ function SideContent() {
                     <div className='modal-box'>
                         <FontAwesomeIcon icon={faFileImage} className='image-icon' />
                         <input id='image-upload' accept='image/*' onChange={AcceptImage} type="file" ref={inputFile} style={{display: 'none'}}></input>
-                        <button onClick={onButtonClick}>Test</button>
+                        <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name'></p>
                     </div>
                     <button>Submit</button>

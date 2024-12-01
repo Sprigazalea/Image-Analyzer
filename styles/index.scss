@@ -153,7 +153,7 @@ textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     width: 500px;
     height: 300px;
     border-style: dashed;
@@ -176,7 +176,16 @@ textarea {
     display: none;
 }
 
+.file-select-button {
+    font-size: 0.85rem;
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(200, 200, 200);
+}
+
 #image-file-name {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin: 0;
 }
