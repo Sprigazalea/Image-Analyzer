@@ -15,11 +15,17 @@ function SideContent() {
     }
 
     function toggleDim() {
+        // change so that when toggleDim is executed, the opacity
+        // is changed directly, this can be done to add a transition
+
+        // doing the above makes the dimDiv always on screen, making
+        // everything unclickable, maybe i show the div and then
+        // change opacity?
         const dimDiv = document.getElementById("dim-div");
-        if (dimDiv.className === "dark") {
-            setDim("hidden")
-        } else if (dimDiv.className === "hidden") {
-            setDim("dark")
+        if (dimDiv.className === 'hidden') {
+            setDim('dark')
+        } else if (dimDiv.className === 'dark') {
+            setDim('hidden')
         } else {
             return;
         }
