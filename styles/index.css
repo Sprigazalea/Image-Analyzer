@@ -236,4 +236,9 @@ textarea {
 .hidden {
   display: none;
 }
+
+#image-file-name {
+  font-size: 1rem;
+  margin: 0;
+}
 /*# sourceMappingURL=index.css.map */
