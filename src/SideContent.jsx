@@ -46,7 +46,7 @@ function SideContent() {
 
     return (
         <>
-        <motion.div animate={{ x: 90 }} className="default-side-div">
+        <motion.div animate={{ x: 90 }} transition={{ type: "tween", stiffness: 100 }} className="default-side-div">
             <div className='inner-div'>
                 <button className='upload-button' onClick={() => {setIsOpen(true); toggleDim()}}>
                     <div className='highlight-div'>
