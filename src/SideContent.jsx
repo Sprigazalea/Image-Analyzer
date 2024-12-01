@@ -41,7 +41,8 @@ function SideContent() {
     }
 
     function SubmitImage() {
-        setImageFile(document.getElementById('image-upload').files[0]) // setImageFile needs to happen before anything below it can happen, also clear data when user uploads new photo
+        setImageFile(document.getElementById('image-upload').files[0]) 
+        // setImageFile needs to happen before anything below it can happen, also clear data when user uploads new photo
         console.log(imageFile)
         const preview = document.getElementsByClassName('image-preview')
         const reader = new FileReader();
