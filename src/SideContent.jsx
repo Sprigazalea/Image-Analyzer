@@ -3,11 +3,9 @@ import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "motion/react"
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
-function AcceptImage() {
-    console.log("success!")
-}
+
 
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
@@ -27,6 +25,13 @@ function SideContent() {
         } else {
             return;
         }
+    }
+
+    function AcceptImage() {
+        const image = document.getElementById('image-upload').files[0].name;
+        const target = document.getElementById('image-file-name');
+
+        target.innerText = image 
     }
 
     return (
@@ -57,8 +62,9 @@ function SideContent() {
                     <DialogTitle>Upload Image</DialogTitle>
                     <div className='modal-box'>
                         <FontAwesomeIcon icon={faFileImage} className='image-icon' />
-                        <input accept='image/*' onChange={AcceptImage} type="file" ref={inputFile} style={{/*display: 'none'*/}}></input>
-                        {/*<button onClick={onButtonClick}>Test</button>*/}
+                        <input id='image-upload' accept='image/*' onChange={AcceptImage} type="file" ref={inputFile} style={{display: 'none'}}></input>
+                        <button onClick={onButtonClick}>Test</button>
+                        <p id='image-file-name'></p>
                     </div>
                     <button>Submit</button>
                 </DialogPanel>
