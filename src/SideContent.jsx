@@ -5,8 +5,6 @@ import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-s
 import { motion } from "motion/react"
 import { useState, useRef, useEffect } from 'react'
 
-
-
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
@@ -66,7 +64,7 @@ function SideContent() {
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name'></p>
                     </div>
-                    <button>Submit</button>
+                    <button id='submit-image'>Submit</button>
                 </DialogPanel>
             </div>
         </Dialog>
