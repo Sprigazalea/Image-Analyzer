@@ -10,7 +10,8 @@ function SideContent() {
     let [dim, setDim] = useState("hidden");
     const inputFile = useRef(null);
 
-    const [imageFile, setImageFile] = useState(null)
+    const [imageFile, setImageFile] = useState(null);
+    const [imageFileName, setImageFileName] = useState(null)
 
     function onButtonClick() {
         inputFile.current.click()
@@ -37,7 +38,10 @@ function SideContent() {
         const image = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
 
-        target.innerText = image;
+        setImageFileName(image)
+        // setImageFileName needs to happen before anything below it can happen, also clear data when user uploads new photo
+
+        target.innerText = imageFileName;
     }
 
     function SubmitImage() {
