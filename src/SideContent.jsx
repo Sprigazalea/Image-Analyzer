@@ -19,9 +19,9 @@ function SideContent() {
     function toggleDim() {
         const dimDiv = document.getElementById("dim-div");
         if (dimDiv.className === "dark") {
-            dimDiv.className = "hidden"
+            setDim("hidden")
         } else if (dimDiv.className === "hidden") {
-            dimDiv.className = "dark"
+            setDim("dark")
         } else {
             return;
         }
