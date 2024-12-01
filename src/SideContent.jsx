@@ -81,9 +81,9 @@ function SideContent() {
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name'></p>
                     </div>
-                    <button id='submit-image' onClick={SubmitImage}>Submit</button>
+                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim()}}>Submit</button>
 
-                    {/* need to create 1. a state that stores the file when it is submitted and 2. an action where clicking submit closes the Dialog window */}
+                    {/* need to create 1. a state that stores the file when it is submitted*/}
                 </DialogPanel>
             </div>
         </Dialog>
