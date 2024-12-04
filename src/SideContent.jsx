@@ -16,26 +16,6 @@ function SideContent() {
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-    const [rerendered, setRerendered] = useState(0);
-    const resolveRef = useRef();
-
-    useEffect(() => {
-        if (!resolveRef.current) {
-            return
-        }
-        resolveRef.current();
-        resolveRef.current = null;
-        console.log("useEffect done!")
-    }, [rerendered])
-
-    const awaitRerenderer = () => {
-        return new Promise (resolve => {
-            resolveRef.current = resolve;
-            setRerendered(current => current + 1);
-            console.log(resolve)
-        })
-    }
-
 ////////////////////////////////////////////////////////////////////////////////////
 
     function onButtonClick() {
