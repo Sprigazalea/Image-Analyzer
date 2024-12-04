@@ -11,7 +11,30 @@ function SideContent() {
     const inputFile = useRef(null);
 
     const [imageFile, setImageFile] = useState(null);
-    const [imageFileName, setImageFileName] = useState(null)
+    const [imageFileName, setImageFileName] = useState(null);
+    const imageFileNameRef = useRef();
+
+////////////////////////////////////////////////////////////////////////////////////
+
+    const [rerendered, setRerendered] = useState(0);
+    const resolveRef = useRef();
+
+    useEffect(() => {
+        if (!resolveRef.current) {
+            return
+        }
+        resolveRef.current();
+        resolveRef.current = null;
+    }, [rerendered])
+
+    const processSetState = () => {
+        return new Promise (resolve => {
+            resolveRef.current = resolve;
+            setRerendered(current => current + 1);
+        })
+    }
+
+////////////////////////////////////////////////////////////////////////////////////
 
     function onButtonClick() {
         inputFile.current.click()
@@ -34,14 +57,17 @@ function SideContent() {
         }
     }
 
-    function AcceptImage() {
+    async function AcceptImage() {
         const image = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
 
-        setImageFileName(image)
         // setImageFileName needs to happen before anything below it can happen, also clear data when user uploads new photo
 
+        console.log(imageFileNameRef.current.innerText)
+        setImageFileName(image)
+        await processSetState()
         target.innerText = imageFileName;
+        console.log(imageFileNameRef.current.innerText)
     }
 
     function SubmitImage() {
@@ -87,7 +113,7 @@ function SideContent() {
                         <FontAwesomeIcon icon={faFileImage} className='image-icon' />
                         <input id='image-upload' accept='image/*' onChange={AcceptImage} type="file" ref={inputFile} style={{display: 'none'}}></input>
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
-                        <p id='image-file-name'></p>
+                        <p id='image-file-name' ref={imageFileNameRef}></p>
                     </div>
                     <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
                     {/* need to create 1. a state that stores the file when it is submitted and 2. have filename still display when closing and reopening dialog*/}

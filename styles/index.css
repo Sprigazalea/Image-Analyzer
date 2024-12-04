@@ -246,6 +246,10 @@ textarea {
   background-color: #c8c8c8;
 }
 
+.file-select-button:active {
+  background-color: #969696;
+}
+
 #image-file-name {
   font-size: 0.95rem;
   margin: 0;
