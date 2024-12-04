@@ -70,7 +70,7 @@ function SideContent() {
         setImageFileName(image)
         await awaitRerenderer()
         console.log(imageFileName)
-        target.innerText = imageFileName;
+        target.innerText = image;
         console.log(`After function: ${imageFileNameRef.current.innerText}`)
     }
 
@@ -117,7 +117,7 @@ function SideContent() {
                         <FontAwesomeIcon icon={faFileImage} className='image-icon' />
                         <input id='image-upload' accept='image/*' onChange={AcceptImage} type="file" ref={inputFile} style={{display: 'none'}}></input>
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
-                        <p id='image-file-name' ref={imageFileNameRef}></p>
+                        <p id='image-file-name' ref={imageFileNameRef}>{imageFileName}</p>
                     </div>
                     <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
                     {/* need to create 1. a state that stores the file when it is submitted and 2. have filename still display when closing and reopening dialog*/}
