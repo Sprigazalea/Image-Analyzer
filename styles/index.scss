@@ -92,6 +92,7 @@ $background_color_6: rgb(38, 38, 38);
         font-weight: 600;
         &:hover{
             background-color: $background-color_4;
+            transition: background-color 0.2s ease-in-out;
         }
         > p {
             margin: 0;
