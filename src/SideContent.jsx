@@ -43,8 +43,6 @@ function SideContent() {
         const image = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
 
-        // setImageFileName needs to happen before anything below it can happen, also clear data when user uploads new photo
-
         setImageFileName(image)
         target.innerText = image;
     }
