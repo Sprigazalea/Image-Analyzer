@@ -46,7 +46,6 @@ function SideContent() {
         // setImageFileName needs to happen before anything below it can happen, also clear data when user uploads new photo
 
         setImageFileName(image)
-        await awaitRerenderer()
         target.innerText = image;
     }
 
