@@ -25,12 +25,14 @@ function SideContent() {
         }
         resolveRef.current();
         resolveRef.current = null;
+        console.log("useEffect done!")
     }, [rerendered])
 
-    const processSetState = () => {
+    const awaitRerenderer = () => {
         return new Promise (resolve => {
             resolveRef.current = resolve;
             setRerendered(current => current + 1);
+            console.log(resolve)
         })
     }
 
@@ -63,11 +65,13 @@ function SideContent() {
 
         // setImageFileName needs to happen before anything below it can happen, also clear data when user uploads new photo
 
-        console.log(imageFileNameRef.current.innerText)
+        console.log(`Before function: ${imageFileNameRef.current.innerText}`)
+        console.log(image)
         setImageFileName(image)
-        await processSetState()
+        await awaitRerenderer()
+        console.log(imageFileName)
         target.innerText = imageFileName;
-        console.log(imageFileNameRef.current.innerText)
+        console.log(`After function: ${imageFileNameRef.current.innerText}`)
     }
 
     function SubmitImage() {
