@@ -39,7 +39,7 @@ function SideContent() {
         }
     }
 
-    async function AcceptImage() {
+    function AcceptImage() {
         const image = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
 
