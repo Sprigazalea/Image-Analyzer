@@ -45,13 +45,9 @@ function SideContent() {
 
         // setImageFileName needs to happen before anything below it can happen, also clear data when user uploads new photo
 
-        console.log(`Before function: ${imageFileNameRef.current.innerText}`)
-        console.log(image)
         setImageFileName(image)
         await awaitRerenderer()
-        console.log(imageFileName)
         target.innerText = image;
-        console.log(`After function: ${imageFileNameRef.current.innerText}`)
     }
 
     function SubmitImage() {
