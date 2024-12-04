@@ -48,16 +48,21 @@ function SideContent() {
     }
 
     function SubmitImage() {
-        setImageFile(document.getElementById('image-upload').files[0]) 
+        const image = document.getElementById('image-upload').files[0];
+
+        setImageFile(image) 
         // setImageFile needs to happen before anything below it can happen, also clear data when user uploads new photo
         console.log(imageFile)
-        const preview = document.getElementsByClassName('image-preview')
+        const preview = document.getElementById('image-preview');
         const reader = new FileReader();
 
         reader.onload = r => {
             console.log(r.target.result)
+            preview.src = r.target.result;
         }
-        reader.readAsDataURL(imageFile)
+        reader.readAsDataURL(image)
+        
+        console.log(image)
     }
 
     return (
@@ -67,7 +72,7 @@ function SideContent() {
                 <button className='upload-button' onClick={() => {setIsOpen(true); toggleDim()}}>
                     <div className='highlight-div'>
                         <img 
-                            className='image-preview' 
+                            id='image-preview' 
                             src=''
                         ></img>
                         <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
