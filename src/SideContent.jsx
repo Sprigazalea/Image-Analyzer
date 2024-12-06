@@ -100,7 +100,6 @@ function SideContent() {
                         <p id='image-file-name' ref={imageFileNameRef}>{imageFileName}</p>
                     </div>
                     <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
-                    {/* need to create 1. a state that stores the file when it is submitted and 2. have filename still display when closing and reopening dialog*/}
                 </DialogPanel>
             </div>
         </Dialog>
