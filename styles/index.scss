@@ -68,7 +68,10 @@ $background_color_6: rgb(38, 38, 38);
     }
 }
 #image-preview {
-    position: absolute;
+    display: block;
+    max-height: 250px;
+    max-width: 250px;
+    //position: absolute;
 }
 .arrow-icon {
     color: white;
