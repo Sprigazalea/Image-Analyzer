@@ -59,8 +59,10 @@ function SideContent() {
         reader.onload = r => {
             console.log(r.target.result)
             preview.src = r.target.result;
+            
         }
         reader.readAsDataURL(image)
+        document.getElementById('arrow-icon').style.display = 'none';
         
         console.log(image)
     }
@@ -75,7 +77,7 @@ function SideContent() {
                             id='image-preview' 
                             src=''
                         ></img>
-                        <FontAwesomeIcon icon={faDownLong} className='arrow-icon'/>
+                        <FontAwesomeIcon icon={faDownLong} className='arrow-icon' id='arrow-icon'/>
                     </div>
                 </button>
             </div>
