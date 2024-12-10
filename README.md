@@ -1,4 +1,4 @@
-# Adding EXIFR
+# Adding [EXIFR](https://github.com/MikeKovarik/exifr)
 
 Once I had image thumbnails appearing on screen, I went ahead and did research on what javascript library would be the most appropriate for parsing typical image file formats, such as JPEG and PNG. 
 
@@ -8,4 +8,4 @@ I initially found a library called [exif-js](https://github.com/exif-js/exif-js)
 2. No live demonstration on how it worked. 
 3. Seemingly little documentation? 
 
-I wanted a bit more from a library covering things I did not fully understand yet. After checking a StackOverflow post, I stumbled upon EXIFR.
+I wanted a bit more from a library covering things I did not fully understand yet. After checking a StackOverflow post, I stumbled upon [EXIFR](https://github.com/MikeKovarik/exifr).
