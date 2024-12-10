@@ -12,5 +12,5 @@ I wanted a bit more from a library covering things I did not fully understand ye
 
 It has a lot of different features, demonstrations to choose from on their website, seemingly easy to use, but on a funnier note...
 
-![EXIFR Website Homepage](readme images/Screenshot_20241209_233740.png)
+![EXIFR Website Homepage](readme_images/Screenshot_20241209_233740.png)
 *oh this layout seems familiar lol*
