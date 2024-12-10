@@ -66,6 +66,8 @@ function SideContent() {
         console.log(image)
     }
 
+// add drag and drop to upload-button or highlight-div
+
     return (
         <>
         <motion.div animate={{ x: 90 }} transition={{ type: "tween", stiffness: 100 }} className="default-side-div">
