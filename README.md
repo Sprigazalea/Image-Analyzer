@@ -1,4 +1,4 @@
-# Adding [EXIFR](https://github.com/MikeKovarik/exifr)
+# Choosing [EXIFR](https://github.com/MikeKovarik/exifr)
 
 Once I had image thumbnails appearing on screen, I went ahead and did research on what Javascript library would be the most appropriate for parsing typical image file formats, such as JPEG and PNG. 
 
@@ -14,3 +14,5 @@ It has a lot of different features, demonstrations to choose from on their websi
 
 ![EXIFR Website Homepage](readme_images/Screenshot_20241209_233740.png)
 *oh this layout seems familiar lol*
+
+This isn't a big deal or anything, but I wouldn't lie if I said I worried a little. I didn't want to be interpreted as a copy-cat or giving people the impression I was copying this website. I tried telling myself that I didn't know about this website until I did researching just recently, so it really shouldn't be an issue.
