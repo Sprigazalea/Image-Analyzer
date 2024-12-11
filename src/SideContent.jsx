@@ -72,6 +72,8 @@ function SideContent() {
     function dropHandler(ev) {
         ev.preventDefault();
         const image = document.getElementById('image-upload').files[0];
+
+        const promisedSetState = (newState) => new Promise(resolve => this.setState(newState, resolve));
     }
 
 ///////////////////////////////////////////////////////////////////////////////////
