@@ -40,13 +40,17 @@ function SideContent() {
         }
     }
 
+////////////////////////////////////////////////////////////////////////////////////
+
     function AcceptImage() {
-        const image = document.getElementById('image-upload').files[0].name;
+        const imgName = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
 
-        setImageFileName(image)
-        target.innerText = image;
+        setImageFileName(imgName)
+        target.innerText = imgName;
     }
+
+///////////////////////////////////////////////////////////////////////////////////
 
     function SubmitImage() {
         const image = document.getElementById('image-upload').files[0];
@@ -66,6 +70,15 @@ function SideContent() {
         
         console.log(image)
     }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+    function dropHandler(ev) {
+        ev.preventDefault();
+        const image = document.getElementById('image-upload').files[0];
+    }
+
+///////////////////////////////////////////////////////////////////////////////////
 
 // add drag and drop to upload-button or highlight-div
 
