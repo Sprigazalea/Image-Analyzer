@@ -73,6 +73,10 @@ function SideContent() {
         ev.preventDefault();
         const image = document.getElementById('image-upload').files[0];
 
+        async function settingState() {
+            
+        }
+
         const promisedSetState = (newState) => new Promise(resolve => this.setState(newState, resolve));
     }
 
