@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "motion/react"
 import { useState, useRef, useEffect } from 'react'
+import ParseImage from './ParseImage'
 
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
@@ -100,7 +101,7 @@ function SideContent() {
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name' ref={imageFileNameRef}>{imageFileName}</p>
                     </div>
-                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
+                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage(); ParseImage(imageFile, imageFileName)}}>Submit</button>
                 </DialogPanel>
             </div>
         </Dialog>
