@@ -9,10 +9,9 @@ import ParseImage from './ParseImage'
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
-    const inputFile = useRef(null);
-
     const [imageFile, setImageFile] = useState(null);
     const [imageFileName, setImageFileName] = useState(null);
+    const inputFile = useRef(null);
     const imageFileNameRef = useRef();
 
     function onButtonClick() {
