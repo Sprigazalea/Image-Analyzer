@@ -79,11 +79,12 @@ function SideContent() {
         ev.preventDefault();
         const image = document.getElementById('image-upload').files[0];
 
-        /*async function settingState() {
-            
-        }*/
-
         const promisedSetState = (newState) => new Promise(resolve => this.setState(newState, resolve));
+
+        // this function must
+        // 1. upload file without opening file dialog
+        // 2. set thumbnail of image
+        // 3. save imageFile and imageFileName
     }
 
 ///////////////////////////////////////////////////////////////////////////////////
