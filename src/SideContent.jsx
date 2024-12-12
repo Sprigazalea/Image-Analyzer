@@ -36,8 +36,6 @@ function SideContent() {
         }
     }
 
-////////////////////////////////////////////////////////////////////////////////////
-
     function AcceptImage() {
         const imgName = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
@@ -45,8 +43,6 @@ function SideContent() {
         setImageFileName(imgName)
         target.innerText = imgName;
     }
-
-///////////////////////////////////////////////////////////////////////////////////
 
     function SubmitImage() {
         const image = document.getElementById('image-upload').files[0];
@@ -64,30 +60,15 @@ function SideContent() {
         document.getElementById('arrow-icon').style.display = 'none';
     }
 
-// above function seemingly does not save image to imageFile using setImageFile, regardless of when its done during the function logic
-
-// the thing is, this function is doing something functionally similar to the AcceptImage function, which i think only updates
-// the state after the modal is closed, maybe thats why setImageFile doesnt update? i would have to make a constant console.log 
-// perhaps to see if this is the case
-
-// i discovered that it is in fact having the same issue as the SubmitImage function, it has the previous imageFile when i get new console.logs
-// to upload a new image. 
-
-///////////////////////////////////////////////////////////////////////////////////
-
     function dropHandler(ev) {
         ev.preventDefault();
         const image = document.getElementById('image-upload').files[0];
-
-        const promisedSetState = (newState) => new Promise(resolve => this.setState(newState, resolve));
 
         // this function must
         // 1. upload file without opening file dialog
         // 2. set thumbnail of image
         // 3. save imageFile and imageFileName
     }
-
-///////////////////////////////////////////////////////////////////////////////////
 
 // add drag and drop to upload-button or highlight-div
 
