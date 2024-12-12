@@ -52,23 +52,16 @@ function SideContent() {
         const image = document.getElementById('image-upload').files[0];
 
         setImageFile(image) 
-        console.log(imageFile)
         const preview = document.getElementById('image-preview');
         const reader = new FileReader();
 
         reader.onload = r => {
             console.log(r.target.result)
-            //setImageFile(r.target.result)
             preview.src = r.target.result;
             
         }
         reader.readAsDataURL(image)
         document.getElementById('arrow-icon').style.display = 'none';
-        
-        console.log(image)
-        setTimeout(() => {
-            console.log(imageFile)
-        }, 2000)
     }
 
 // above function seemingly does not save image to imageFile using setImageFile, regardless of when its done during the function logic
@@ -76,6 +69,9 @@ function SideContent() {
 // the thing is, this function is doing something functionally similar to the AcceptImage function, which i think only updates
 // the state after the modal is closed, maybe thats why setImageFile doesnt update? i would have to make a constant console.log 
 // perhaps to see if this is the case
+
+// i discovered that it is in fact having the same issue as the SubmitImage function, it has the previous imageFile when i get new console.logs
+// to upload a new image. 
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -94,6 +90,10 @@ function SideContent() {
 ///////////////////////////////////////////////////////////////////////////////////
 
 // add drag and drop to upload-button or highlight-div
+
+    useEffect(() => {
+        ParseImage(imageFile, imageFileName)
+    }, [imageFile])
 
     return (
         <>
@@ -127,7 +127,7 @@ function SideContent() {
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name' ref={imageFileNameRef}>{imageFileName}</p>
                     </div>
-                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage(); ParseImage(imageFile, imageFileName)}}>Submit</button>
+                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
                 </DialogPanel>
             </div>
         </Dialog>
