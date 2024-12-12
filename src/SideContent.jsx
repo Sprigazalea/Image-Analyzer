@@ -58,6 +58,7 @@ function SideContent() {
 
         reader.onload = r => {
             console.log(r.target.result)
+            //setImageFile(r.target.result)
             preview.src = r.target.result;
             
         }
@@ -65,7 +66,12 @@ function SideContent() {
         document.getElementById('arrow-icon').style.display = 'none';
         
         console.log(image)
+        setTimeout(() => {
+            console.log(imageFile)
+        }, 2000)
     }
+
+// above function seemingly does not save image to imageFile using setImageFile, regardless of when its done during the function logic
 
 ///////////////////////////////////////////////////////////////////////////////////
 
