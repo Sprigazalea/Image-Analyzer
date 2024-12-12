@@ -73,6 +73,10 @@ function SideContent() {
 
 // above function seemingly does not save image to imageFile using setImageFile, regardless of when its done during the function logic
 
+// the thing is, this function is doing something functionally similar to the AcceptImage function, which i think only updates
+// the state after the modal is closed, maybe thats why setImageFile doesnt update? i would have to make a constant console.log 
+// perhaps to see if this is the case
+
 ///////////////////////////////////////////////////////////////////////////////////
 
     function dropHandler(ev) {
