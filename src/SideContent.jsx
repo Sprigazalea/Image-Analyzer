@@ -51,7 +51,6 @@ function SideContent() {
         const reader = new FileReader();
 
         reader.onload = r => {
-            console.log(r.target.result)
             preview.src = r.target.result;
             
         }
