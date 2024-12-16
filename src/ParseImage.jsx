@@ -15,6 +15,8 @@ export default function ParseImage(imageFile, imageFileName) {
             console.log(imageFile.size)
             console.log(imageFile.type)
             console.log(JSON.stringify(value))
+
+            textarea.innerText = JSON.stringify(value)
         })
     )
 }
