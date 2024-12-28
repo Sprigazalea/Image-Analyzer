@@ -19,7 +19,7 @@ export default function ParseImage(imageFile, imageFileName) {
 
             const formattedString = rawOutput
 
-            textarea.innerText = JSON.stringify(value)
+            textarea.innerText = JSON.stringify(value).replaceAll(',', ', \n')
         })
     )
 }
