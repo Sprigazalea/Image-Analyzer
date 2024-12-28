@@ -29,3 +29,8 @@ export default function ParseImage(imageFile, imageFileName) {
 // 1. turn rawOutput into a string
 // 2. use split and join to add line breaks
 // 3. add {} at beginning and end with line breaks to replicate json look
+// or
+// 1. turn rawOutput into a string
+// 2. use str.replace()
+
+// str.replace seems to make the most sense
