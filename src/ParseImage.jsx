@@ -2,7 +2,7 @@ import exifr from "exifr";
 
 export default function ParseImage(imageFile, imageFileName) {
 
-    return (
+    const Output = () => {
         exifr.parse(imageFile).then((value) => {
             const reader = new FileReader();
             const rawOutput = JSON.stringify(value);
@@ -19,6 +19,10 @@ export default function ParseImage(imageFile, imageFileName) {
 
             textarea.innerText = JSON.stringify(value).replaceAll(',', ', \n')
         })
+    }
+
+    return (
+        Output()
     )
 }
 
