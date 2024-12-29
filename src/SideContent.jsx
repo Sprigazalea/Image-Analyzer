@@ -8,6 +8,7 @@ import ParseImage from './ParseImage'
 
 function SideContent() {
     let [isOpen, setIsOpen] = useState(false);
+    let [isFAQOpen, setIsFAQOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
     const [imageFile, setImageFile] = useState(null);
     const [imageFileName, setImageFileName] = useState(null);
@@ -107,6 +108,13 @@ function SideContent() {
                         <p id='image-file-name' ref={imageFileNameRef}>{imageFileName}</p>
                     </div>
                     <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
+                </DialogPanel>
+            </div>
+        </Dialog>
+        <Dialog open={isFAQOpen} onClose={() => {setIsFAQOpen(false); toggleDim()}}>
+            <div>
+                <DialogPanel>
+
                 </DialogPanel>
             </div>
         </Dialog>
