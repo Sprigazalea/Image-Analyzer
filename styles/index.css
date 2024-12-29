@@ -179,6 +179,10 @@ textarea {
   resize: none;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 .modal {
   position: absolute;
   z-index: 99;

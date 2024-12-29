@@ -127,6 +127,9 @@ textarea {
     width: 560px;
     font-size: 1.25rem;
     resize: none;
+    &:focus {
+        outline: none;
+    }
 }
 
 //maybe push text up a few pixels to center the text along the "lines"?
