@@ -1,8 +1,6 @@
 import exifr from "exifr";
 
 export default function ParseImage(imageFile, imageFileName) {
-    //console.log(imageFile)
-    //console.log(imageFileName)
 
     return (
         exifr.parse(imageFile).then((value) => {
