@@ -114,8 +114,10 @@ function SideContent() {
         <Dialog open={isFAQOpen} onClose={() => {setIsFAQOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
-                    <DialogTitle>FAQ</DialogTitle>
-                    <p>test</p>
+                    <h2>What is this website?</h2>
+                    <p>Essentially, it is a Web GUI for the EXIFR library. It takes images and outputs the metadata stored within.</p>
+                    <h2>What metadata can it read?</h2>
+                    <p>EXIFR</p>
                 </DialogPanel>
             </div>
         </Dialog>
