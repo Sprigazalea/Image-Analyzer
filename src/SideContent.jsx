@@ -90,7 +90,7 @@ function SideContent() {
                 </button>
             </div>
             <div className='side-options'>
-                <a><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a><p>Title</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
@@ -112,9 +112,9 @@ function SideContent() {
             </div>
         </Dialog>
         <Dialog open={isFAQOpen} onClose={() => {setIsFAQOpen(false); toggleDim()}}>
-            <div>
-                <DialogPanel>
-
+            <div className='modal-div'>
+                <DialogPanel className=''>
+                    <DialogTitle>FAQ</DialogTitle>
                 </DialogPanel>
             </div>
         </Dialog>
