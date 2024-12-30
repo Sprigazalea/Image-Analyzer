@@ -72,7 +72,7 @@ function SideContent() {
 // add drag and drop to upload-button or highlight-div
 
     useEffect(() => {
-        ParseImage(imageFile, imageFileName)
+        ParseImage(imageFile)
     }, [imageFile])
 
     return (
