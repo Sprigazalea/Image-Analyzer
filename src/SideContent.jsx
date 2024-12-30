@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from 'react'
 import ParseImage from './ParseImage'
 
 function SideContent() {
-    let [isOpen, setIsOpen] = useState(false);
+    let [isUploadOpen, setIsUploadOpen] = useState(false);
     let [isFAQOpen, setIsFAQOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
     const [imageFile, setImageFile] = useState(null);
@@ -79,7 +79,7 @@ function SideContent() {
         <>
         <motion.div animate={{ x: 90 }} transition={{ type: "tween", stiffness: 100 }} className="default-side-div">
             <div className='inner-div'>
-                <button className='upload-button' onClick={() => {setIsOpen(true); toggleDim()}}>
+                <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}}>
                     <div className='highlight-div'>
                         <img 
                             id='image-preview' 
@@ -97,7 +97,7 @@ function SideContent() {
                 <a><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
             </div>
         </motion.div>
-        <Dialog open={isOpen} onClose={() => {setIsOpen(false); toggleDim()}} className='modal'>
+        <Dialog open={isUploadOpen} onClose={() => {setIsUploadOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <DialogTitle>Upload Image</DialogTitle>
@@ -107,14 +107,15 @@ function SideContent() {
                         <button className='file-select-button' onClick={onButtonClick}>Select File</button>
                         <p id='image-file-name' ref={imageFileNameRef}>{imageFileName}</p>
                     </div>
-                    <button id='submit-image' onClick={() => {setIsOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
+                    <button id='submit-image' onClick={() => {setIsUploadOpen(false); toggleDim(); SubmitImage()}}>Submit</button>
                 </DialogPanel>
             </div>
         </Dialog>
-        <Dialog open={isFAQOpen} onClose={() => {setIsFAQOpen(false); toggleDim()}}>
+        <Dialog open={isFAQOpen} onClose={() => {setIsFAQOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
-                <DialogPanel className=''>
+                <DialogPanel className='modal-panel'>
                     <DialogTitle>FAQ</DialogTitle>
+                    <p>test</p>
                 </DialogPanel>
             </div>
         </Dialog>
