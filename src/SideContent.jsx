@@ -118,6 +118,8 @@ function SideContent() {
                     <p>Essentially, it is a Web GUI for the EXIFR library. It takes images and outputs the metadata stored within.</p>
                     <h2>What metadata can it read?</h2>
                     <p>EXIFR</p>
+                    <h2>Are there any privacy concerns I should worry about?</h2>
+                    <p>Most likely not. The parsing done on the website does not interact with any server components, all running on javascript loaded locally.</p>
                 </DialogPanel>
             </div>
         </Dialog>
