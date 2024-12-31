@@ -177,6 +177,7 @@ textarea {
   width: 560px;
   font-size: 1.25rem;
   resize: none;
+  white-space: pre-line;
 }
 
 textarea:focus {

@@ -130,6 +130,7 @@ textarea {
     &:focus {
         outline: none;
     }
+    white-space: pre-line;
 }
 
 //maybe push text up a few pixels to center the text along the "lines"?

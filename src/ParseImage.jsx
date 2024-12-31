@@ -7,17 +7,19 @@ export default function ParseImage(imageFile) {
             const reader = new FileReader();
             const rawOutput = JSON.stringify(value);
 
-            console.log(imageFile)
-            console.log(imageFile.name)
-            console.log(imageFile.lastModified)
-            console.log(imageFile.webkitRelativePath)
-            console.log(imageFile.size)
-            console.log(imageFile.type)
-            console.log(JSON.stringify(value))
+            //console.log(imageFile)
+            //console.log(imageFile.name)
+            //console.log(imageFile.lastModified)
+            //console.log(imageFile.webkitRelativePath)
+            //console.log(imageFile.size)
+            //console.log(imageFile.type)
+            //console.log(JSON.stringify(value))
 
-            const formattedString = rawOutput
+            const formattedString = rawOutput.split(',').join(',\n');
 
-            textarea.innerText = JSON.stringify(value).replaceAll(',', ', \n')
+            console.log(formattedString)
+
+            textarea.innerText = formattedString;
         })
     }
 
