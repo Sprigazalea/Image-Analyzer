@@ -5,7 +5,7 @@ export default function ParseImage(imageFile) {
     const Output = () => {
         exifr.parse(imageFile).then((value) => {
             const reader = new FileReader();
-            const rawOutput = JSON.stringify(value);
+            const rawOutput = JSON.stringify(value, null, 4);
 
             //console.log(imageFile)
             //console.log(imageFile.name)
@@ -15,11 +15,11 @@ export default function ParseImage(imageFile) {
             //console.log(imageFile.type)
             //console.log(JSON.stringify(value))
 
-            const formattedString = rawOutput.split(',').join(',\n');
+            const formattedString = rawOutput
 
             console.log(formattedString)
 
-            textarea.innerText = formattedString;
+            textarea.value = formattedString;
         })
     }
 
