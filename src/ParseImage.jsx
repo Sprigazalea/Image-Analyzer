@@ -5,7 +5,7 @@ export default function ParseImage(imageFile) {
     const Output = () => {
         exifr.parse(imageFile).then((value) => {
             const reader = new FileReader();
-            const rawOutput = JSON.stringify(value, null, 4);
+            const rawOutput = JSON.stringify(value, null, 1);
 
             //console.log(imageFile)
             //console.log(imageFile.name)
