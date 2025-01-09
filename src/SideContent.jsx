@@ -20,6 +20,7 @@ function SideContent() {
     const onDrop = useCallback(acceptedFiles => {
         const image = acceptedFiles[0]
         console.log(test)
+        // drag dropzone button and other elements into the return part of MyDropzone, i think that should render it on load?
     })
     
     function MyDropzone() {
