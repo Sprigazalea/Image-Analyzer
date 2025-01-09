@@ -37,6 +37,8 @@ function SideContent() {
     }
 
     function AcceptImage() {
+        // sets ImageFileName useState and adds innerText with file name
+
         const imgName = document.getElementById('image-upload').files[0].name;
         const target = document.getElementById('image-file-name');
 
