@@ -3,7 +3,8 @@ import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "motion/react"
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
+import Dropzone, { useDropzone } from 'react-dropzone'
 import ParseImage from './ParseImage'
 
 function SideContent() {
@@ -14,6 +15,15 @@ function SideContent() {
     const [imageFileName, setImageFileName] = useState(null);
     const inputFile = useRef(null);
     const imageFileNameRef = useRef();
+    const {getRootProps, getInputProps} = useDropzone({onDrop})
+
+    const onDrop = useCallback(acceptedFiles => {
+        const image = acceptedFiles[0]
+        console.log(test)
+    })
+    
+    function MyDropzone() {
+    }
 
     function onButtonClick() {
         inputFile.current.click()
@@ -81,7 +91,7 @@ function SideContent() {
         <>
         <motion.div animate={{ x: 90 }} transition={{ type: "tween", stiffness: 100 }} className="default-side-div">
             <div className='inner-div'>
-                <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}}>
+                <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}} onMouseUp={MyDropzone} {...getRootProps()}>
                     <div className='highlight-div'>
                         <img 
                             id='image-preview' 
