@@ -1,10 +1,10 @@
 import '/styles/index.css'
-import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownLong, faAngleRight, faFileImage } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "motion/react"
 import { useState, useRef, useEffect, useCallback } from 'react'
-import Dropzone, { useDropzone } from 'react-dropzone'
+import { useDropzone } from 'react-dropzone'
 import ParseImage from './ParseImage'
 
 function SideContent() {
@@ -140,15 +140,5 @@ function SideContent() {
         </>
     )
 }
-
-// i think it will be necessary to do some of the logic of the 
-// image processing in its own file, that way sidecontent and
-// maincontent can access either of its needed info when 
-// needed, if it works the way i think it works
-
-// a part of the logic in this file might need to be moved
-// to different files for different purposes, maybe split
-// into their own files? not sure yet. but i need to decide
-// now before continuing forward
 
 export default SideContent
