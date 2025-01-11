@@ -100,7 +100,7 @@ function SideContent() {
 
     return (
         <>
-        <motion.div animate={{ x: 90 }} transition={{ type: "tween", stiffness: 100 }} className="default-side-div">
+        <motion.div animate={{ opacity: 1, x: 90 }} transition={{ type: "tween", stiffness: 100 }} initial={{ opacity: 0}} className="default-side-div">
             {MyDropzone()}
             <div className='side-options'>
                 <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
