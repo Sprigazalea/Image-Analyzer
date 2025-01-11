@@ -104,10 +104,10 @@ function SideContent() {
             {MyDropzone()}
             <div className='side-options'>
                 <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
             </div>
         </motion.div>
         <Dialog open={isUploadOpen} onClose={() => {setIsUploadOpen(false); toggleDim()}} className='modal'>
