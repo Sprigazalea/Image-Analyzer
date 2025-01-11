@@ -94,6 +94,10 @@ function SideContent() {
         document.getElementById('arrow-icon').style.display = 'none';
     }
 
+    function NoImage() {
+        alert('No image uploaded!')
+    }
+
     useEffect(() => {
         ParseImage(imageFile)
     }, [imageFile])
