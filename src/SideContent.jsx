@@ -15,16 +15,44 @@ function SideContent() {
     const [imageFileName, setImageFileName] = useState(null);
     const inputFile = useRef(null);
     const imageFileNameRef = useRef();
-    const {getRootProps, getInputProps} = useDropzone({onDrop})
-
-    const onDrop = useCallback(acceptedFiles => {
+    
+    /*const onDrop = useCallback(acceptedFiles => {
         const image = acceptedFiles[0]
         console.log(test)
         // drag dropzone button and other elements into the return part of MyDropzone, i think that should render it on load?
-    })
+    })*/
     
-    function MyDropzone() {
-    }
+        function MyDropzone() {
+            const onDrop = useCallback(acceptedFiles => {
+                const image = acceptedFiles[0]
+    
+                setImageFile(image)
+                const preview = document.getElementById('image-preview')
+                const reader = new FileReader()
+    
+                reader.onload = r => {
+                    preview.src = r.target.result;
+                }
+                reader.readAsDataURL(image)
+                document.getElementById('arrow-icon').style.display = 'none';
+            })
+
+            const {getRootProps, getInputProps} = useDropzone({onDrop})
+    
+            return (
+                <div className='inner-div' {...getRootProps()}>
+                    <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}} onMouseUp={MyDropzone} {...getRootProps()}>
+                        <div className='highlight-div'>
+                            <img 
+                                id='image-preview' 
+                                src=''
+                            ></img>
+                            <FontAwesomeIcon icon={faDownLong} className='arrow-icon' id='arrow-icon'/>
+                        </div>
+                    </button>
+                </div>
+            )
+        }
 
     function onButtonClick() {
         inputFile.current.click()
@@ -91,17 +119,7 @@ function SideContent() {
     return (
         <>
         <motion.div animate={{ x: 90 }} transition={{ type: "tween", stiffness: 100 }} className="default-side-div">
-            <div className='inner-div'>
-                <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}} onMouseUp={MyDropzone} {...getRootProps()}>
-                    <div className='highlight-div'>
-                        <img 
-                            id='image-preview' 
-                            src=''
-                        ></img>
-                        <FontAwesomeIcon icon={faDownLong} className='arrow-icon' id='arrow-icon'/>
-                    </div>
-                </button>
-            </div>
+            {MyDropzone()}
             <div className='side-options'>
                 <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a><p>Title</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
