@@ -35,7 +35,7 @@ function SideContent() {
                 }
                 reader.readAsDataURL(image)
                 document.getElementById('arrow-icon').style.display = 'none';
-            })
+            }, [])
 
             const {getRootProps, getInputProps} = useDropzone({onDrop})
     
