@@ -16,43 +16,37 @@ function SideContent() {
     const inputFile = useRef(null);
     const imageFileNameRef = useRef();
     
-    /*const onDrop = useCallback(acceptedFiles => {
-        const image = acceptedFiles[0]
-        console.log(test)
-        // drag dropzone button and other elements into the return part of MyDropzone, i think that should render it on load?
-    })*/
+    function MyDropzone() {
+        const onDrop = useCallback(acceptedFiles => {
+            const image = acceptedFiles[0]
     
-        function MyDropzone() {
-            const onDrop = useCallback(acceptedFiles => {
-                const image = acceptedFiles[0]
+            setImageFile(image)
+            const preview = document.getElementById('image-preview')
+            const reader = new FileReader()
     
-                setImageFile(image)
-                const preview = document.getElementById('image-preview')
-                const reader = new FileReader()
-    
-                reader.onload = r => {
-                    preview.src = r.target.result;
-                }
-                reader.readAsDataURL(image)
-                document.getElementById('arrow-icon').style.display = 'none';
-            }, [])
+            reader.onload = r => {
+                preview.src = r.target.result;
+            }
+            reader.readAsDataURL(image)
+            document.getElementById('arrow-icon').style.display = 'none';
+        }, [])
 
-            const {getRootProps, getInputProps} = useDropzone({onDrop})
+        const {getRootProps, getInputProps} = useDropzone({onDrop})
     
-            return (
-                <div className='inner-div' {...getRootProps()}>
-                    <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}} onMouseUp={MyDropzone}>
-                        <div className='highlight-div'>
-                            <img 
-                                id='image-preview' 
-                                src=''
-                            ></img>
-                            <FontAwesomeIcon icon={faDownLong} className='arrow-icon' id='arrow-icon'/>
-                        </div>
-                    </button>
-                </div>
-            )
-        }
+        return (
+            <div className='inner-div' {...getRootProps()}>
+                <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}} onMouseUp={MyDropzone}>
+                    <div className='highlight-div'>
+                        <img 
+                            id='image-preview' 
+                            src=''
+                        ></img>
+                        <FontAwesomeIcon icon={faDownLong} className='arrow-icon' id='arrow-icon'/>
+                    </div>
+                </button>
+            </div>
+        )
+    }
 
     function onButtonClick() {
         inputFile.current.click()
@@ -99,18 +93,6 @@ function SideContent() {
         reader.readAsDataURL(image)
         document.getElementById('arrow-icon').style.display = 'none';
     }
-
-    function dropHandler(ev) {
-        ev.preventDefault();
-        const image = document.getElementById('image-upload').files[0];
-
-        // this function must
-        // 1. upload file without opening file dialog
-        // 2. set thumbnail of image
-        // 3. save imageFile and imageFileName
-    }
-
-// add drag and drop to upload-button or highlight-div
 
     useEffect(() => {
         ParseImage(imageFile)
