@@ -10,6 +10,7 @@ import ParseImage from './ParseImage'
 function SideContent() {
     let [isUploadOpen, setIsUploadOpen] = useState(false);
     let [isFAQOpen, setIsFAQOpen] = useState(false);
+    let [isCompatOpen, setIsCompatOpen] = useState(false);
     let [isCreditsOpen, setIsCreditsOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
     const [imageFile, setImageFile] = useState(null);
@@ -109,7 +110,7 @@ function SideContent() {
             {MyDropzone()}
             <div className='side-options'>
                 <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a onClick={() => {setIsCompatOpen(true); toggleDim()}}><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {if (!imageFile) {NoImage()}}}><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {if (!imageFile) (NoImage())}}><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {setIsCreditsOpen(true); toggleDim()}}><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
@@ -141,10 +142,17 @@ function SideContent() {
                 </DialogPanel>
             </div>
         </Dialog>
+        <Dialog open={isCompatOpen} onClose={() => {setIsCompatOpen(false); toggleDim()}} className='modal'>
+            <div className='modal-div'>
+                <DialogPanel className='modal-panel'>
+
+                </DialogPanel>
+            </div>
+        </Dialog>
         <Dialog open={isCreditsOpen} onClose={() => {setIsCreditsOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
-                    
+
                 </DialogPanel>
             </div>
         </Dialog>
