@@ -35,7 +35,7 @@ function SideContent() {
     
         return (
             <div className='inner-div' {...getRootProps()}>
-                <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}} onMouseUp={MyDropzone}>
+                <button className='upload-button' onClick={() => {setIsUploadOpen(true); toggleDim()}}>
                     <div className='highlight-div'>
                         <img 
                             id='image-preview' 
