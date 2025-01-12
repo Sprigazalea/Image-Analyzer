@@ -10,6 +10,7 @@ import ParseImage from './ParseImage'
 function SideContent() {
     let [isUploadOpen, setIsUploadOpen] = useState(false);
     let [isFAQOpen, setIsFAQOpen] = useState(false);
+    let [isCreditsOpen, setIsCreditsOpen] = useState(false);
     let [dim, setDim] = useState("hidden");
     const [imageFile, setImageFile] = useState(null);
     const [imageFileName, setImageFileName] = useState(null);
@@ -111,7 +112,7 @@ function SideContent() {
                 <a><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {if (!imageFile) {NoImage()}}}><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {if (!imageFile) (NoImage())}}><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a onClick={() => {setIsCreditsOpen(true); toggleDim()}}><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
             </div>
         </motion.div>
         <Dialog open={isUploadOpen} onClose={() => {setIsUploadOpen(false); toggleDim()}} className='modal'>
@@ -137,6 +138,13 @@ function SideContent() {
                     <p>EXIFR</p>
                     <h2>Are there any privacy concerns I should worry about?</h2>
                     <p>Most likely not. The parsing done on the website does not interact with any server components, all running on javascript loaded locally.</p>
+                </DialogPanel>
+            </div>
+        </Dialog>
+        <Dialog open={isCreditsOpen} onClose={() => {setIsCreditsOpen(false); toggleDim()}} className='modal'>
+            <div className='modal-div'>
+                <DialogPanel className='modal-panel'>
+                    
                 </DialogPanel>
             </div>
         </Dialog>
