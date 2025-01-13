@@ -145,7 +145,7 @@ function SideContent() {
         <Dialog open={isCompatOpen} onClose={() => {setIsCompatOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
-
+                    <h2>Supported Files</h2>
                 </DialogPanel>
             </div>
         </Dialog>
