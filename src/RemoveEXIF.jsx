@@ -24,3 +24,9 @@ export default function RemoveEXIF(imageFile) {
 
     return(exportImage)
 } 
+
+// because ParseImage is used in the useEffect, it would be
+// better to route this function in there
+
+// either that, or add another useEffect to be used for 
+// this function somehow. the former seems easier tho
