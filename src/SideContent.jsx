@@ -97,7 +97,9 @@ function SideContent() {
     }
 
     function NoImage() {
-        alert('No image uploaded!')
+        if (!imageFile) {
+            alert('No image uploaded!')
+        }
     }
 
     useEffect(() => {
@@ -111,8 +113,8 @@ function SideContent() {
             <div className='side-options'>
                 <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {setIsCompatOpen(true); toggleDim()}}><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a onClick={() => {if (!imageFile) {NoImage()}}}><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a onClick={() => {if (!imageFile) (NoImage())}}><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a onClick={() => {NoImage()}}><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a onClick={() => {NoImage()}}><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {setIsCreditsOpen(true); toggleDim()}}><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
             </div>
         </motion.div>
