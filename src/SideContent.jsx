@@ -154,7 +154,7 @@ function SideContent() {
         <Dialog open={isCreditsOpen} onClose={() => {setIsCreditsOpen(false); toggleDim()}} className='modal'>
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
-
+                    <h2>Credits</h2>
                 </DialogPanel>
             </div>
         </Dialog>
