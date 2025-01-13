@@ -131,9 +131,10 @@ textarea {
     &:focus {
         outline: none;
     }
+    //maybe push text up a few pixels to center the text along the "lines"?
 }
 
-//maybe push text up a few pixels to center the text along the "lines"?
+// ---MODAL CSS---
 
 .modal {
     position: absolute;
@@ -168,6 +169,8 @@ textarea {
     border-color: gray;
     border-width: 3px;
 }
+
+
 
 .dark {
     position: fixed;
