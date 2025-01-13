@@ -5,10 +5,22 @@ export default function RemoveEXIF(imageFile) {
     const image = imageFile
     let exportImage 
 
-    const reader = fs.createReadStream(image)
-    const writer = fs.createWriteStream(exportImage)
+    const read = fs.createReadStream(image)
+    const write = fs.createWriteStream(exportImage)
 
-    reader.pipe(new ExifTransformer()).pipe(writer)
+    read.pipe(new ExifTransformer()).pipe(write)
+
+    setImageFile(exportImage)
+
+    const preview = document.getElementById('image-preview');
+    const reader = new FileReader();
+
+    reader.onload = r => {
+        preview.src = r.target.result;
+        
+    }
+
+    reader.readAsDataURL(image)
 
     return(exportImage)
 } 
