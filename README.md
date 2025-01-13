@@ -26,3 +26,11 @@ After checking more console.logs, I found a similar pattern as I noticed in the 
 I still couldn't properly figure out how to address this though. Maybe it needed another render? I believe thats what helped the AcceptImage function as well. I discussed it with a friend who has vague knowledge of React and they recommended I try a hook to achieve this. useEffect was what helped me here, as watching specifically for the imageFile state to change allowed the console.logs to display the proper information. 
 
 Thusly, I was able to successfully send the information that was needed to the ParseImage file, which is where all the logic for parsing metadata will go!
+
+# Drag and Drop
+
+For this part, I used the [react-dropzone package](https://react-dropzone.js.org/). Luckily, this wasn't very complicated. I created a function for the dropzone, and moved my existing code for the div and everything inside it, into the return part of the function. I could then execute the dropzone function where the old div was thanks to react.
+
+# Removing EXIF Data
+
+Removing EXIF Data would be very useful given that is often where sensitive information is held. I found a package called [exif-be-gone] (https://github.com/joshbuddy/exif-be-gone#readme).
