@@ -1,8 +1,12 @@
+import exif from 'exif-js'
+
 export default function RemoveEXIF(imageFile) {
+    let image = imageFile
 
-    const image = imageFile
-
-    setImageFile(exportImage)
+    exif.getData(image, function() {
+        exif.remove(image);
+        setImageFile(image)
+    })
 
     const preview = document.getElementById('image-preview');
     const reader = new FileReader();
@@ -13,8 +17,6 @@ export default function RemoveEXIF(imageFile) {
     }
 
     reader.readAsDataURL(image)
-
-    return(exportImage)
 } 
 
 // because ParseImage is used in the useEffect, it would be
