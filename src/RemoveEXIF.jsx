@@ -1,14 +1,6 @@
 export default function RemoveEXIF(imageFile) {
-    const ExifTransformer = require('exif-be-gone')
-    const fs = require("fs")
 
     const image = imageFile
-    let exportImage 
-
-    const read = fs.createReadStream(image)
-    const write = fs.createWriteStream(exportImage)
-
-    read.pipe(new ExifTransformer()).pipe(write)
 
     setImageFile(exportImage)
 
