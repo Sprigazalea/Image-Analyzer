@@ -33,4 +33,8 @@ For this part, I used the [react-dropzone package](https://react-dropzone.js.org
 
 # Removing EXIF Data
 
-Removing EXIF Data would be very useful given that is often where sensitive information is held. I found a package called [exif-be-gone] (https://github.com/joshbuddy/exif-be-gone#readme).
+Removing EXIF Data would be very useful given that is often where sensitive information is held. I found a package called [exif-be-gone] (https://github.com/joshbuddy/exif-be-gone#readme). However, this turned out to be a package that was expected to be ran server-side, and I unfortunately don't know enough about the backend in order to run something like that. I had to make a [forum post](https://forum.freecodecamp.org/t/having-trouble-with-require/730409) for help regarding the issue, and is how I found out the issue. I do plan on learning the backend, but learning it for this project seems like not the best investment, at least when concerning time. I narrowed my search to two potential packages.
+
+I had to choose between a package called [exif-js](https://github.com/exif-js/exif-js) and [Compressor.js](https://www.npmjs.com/package/compressorjs)... wait a minute. 
+
+Exif.js is the package I initially passed on before, but it as well as Compressor.js can remove EXIF data from client-side. These were the best options I had. 
