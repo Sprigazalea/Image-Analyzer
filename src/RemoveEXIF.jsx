@@ -6,7 +6,6 @@ export default function RemoveEXIF(imageFile) {
 
     new Compressor(image, {
         success(result) {
-            console.log('success')
             const preview = document.getElementById('image-preview');
             const reader = new FileReader();
 
