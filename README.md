@@ -38,3 +38,5 @@ Removing EXIF Data would be very useful given that is often where sensitive info
 I had to choose between a package called [exif-js](https://github.com/exif-js/exif-js) and [Compressor.js](https://www.npmjs.com/package/compressorjs)... wait a minute. 
 
 Exif.js is the package I initially passed on before, but it as well as Compressor.js can remove EXIF data from client-side. These were the best options I had. 
+
+Initially, I went with the first option, not realizing this was in fact the same package I passed on before! It caused a lot of issues, with mostly the .js file it was referencing to exectute the logic constantly failing with common issues, like not including the let keyword when setting up a for loop. I kept trying to fix these errors, but it didn't seem to really get me much of anywhere.
