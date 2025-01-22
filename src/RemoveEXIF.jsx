@@ -1,7 +1,7 @@
 import exif from 'exif-js'
 
 export default function RemoveEXIF(imageFile) {
-    let image = imageFile
+    let image = document.getElementById('image-preview');
 
     exif.getData(image, function() {
         exif.remove(image);
