@@ -4,7 +4,7 @@ export default function RemoveEXIF(imageFile) {
     let image = document.getElementById('image-preview');
 
     exif.getData(image, function() {
-        exif.remove(image);
+        exif.remove
         setImageFile(image)
     })
 
