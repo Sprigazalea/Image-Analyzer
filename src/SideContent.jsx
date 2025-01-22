@@ -114,7 +114,7 @@ function SideContent() {
             <div className='side-options'>
                 <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {setIsCompatOpen(true); toggleDim()}}><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a onClick={() => {NoImage(); RemoveEXIF()}}><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a onClick={() => {NoImage(); RemoveEXIF(imageFile)}}><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {NoImage()}}><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {setIsCreditsOpen(true); toggleDim()}}><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
             </div>
