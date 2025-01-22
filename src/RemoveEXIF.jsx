@@ -1,22 +1,23 @@
-import exif from 'exif-js'
+import Compressor from "compressorjs";
+import ParseImage from "./ParseImage";
 
 export default function RemoveEXIF(imageFile) {
-    let image = document.getElementById('image-preview');
+    let image = imageFile;
 
-    exif.getData(image, function() {
-        exif.remove
-        setImageFile(image)
+    new Compressor(image, {
+        success(result) {
+            console.log('success')
+            const preview = document.getElementById('image-preview');
+            const reader = new FileReader();
+
+            reader.onload = r => {
+                preview.src = r.target.result;
+            }
+
+            reader.readAsDataURL(result)
+            ParseImage(result)
+        }
     })
-
-    const preview = document.getElementById('image-preview');
-    const reader = new FileReader();
-
-    reader.onload = r => {
-        preview.src = r.target.result;
-        
-    }
-
-    reader.readAsDataURL(image)
 } 
 
 // because ParseImage is used in the useEffect, it would be
