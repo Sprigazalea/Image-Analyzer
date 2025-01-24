@@ -47,4 +47,4 @@ I took a bit to think about it regardless. My partner convinced me it would prob
 
 Finally! My website was starting to look feature complete. I knew despite this, I still needed to update my imageFile state in order to account for the new image without the EXIF data. This was a bit harder than I was expecting. I couldnt use setImageFile as even though I was calling for it to execute from my SideContent file, the RemoveExif file could not access the states in the SIdeContent file. 
 
-The easiest solution to this problem would be to move the content of the RemoveExif file over to my SideContent file. 
+The easiest solution to this problem would be to move the content of the RemoveExif file over to my SideContent file. After attempting this and getting it working without calling the ParseImage file, I could remove most of the logic written in the Compressor function (which admittedly wasn't a lot to begin with), and it could now fit comfortably within my larger file.
