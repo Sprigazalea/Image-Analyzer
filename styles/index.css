@@ -178,6 +178,7 @@ textarea {
   font-size: 1.25rem;
   resize: none;
   white-space: pre-wrap;
+  padding-left: 12px;
 }
 
 textarea:focus {
