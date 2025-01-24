@@ -30,7 +30,7 @@ function SideContent() {
                 }
         
                 reader.readAsDataURL(result)
-                ParseImage(result)
+                setImageFile(result)
             }
         })
     }   
