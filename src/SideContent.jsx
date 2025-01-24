@@ -22,14 +22,6 @@ function SideContent() {
     function RemoveEXIF() {
         new Compressor(imageFile, {
             success(result) {
-                const preview = document.getElementById('image-preview');
-                const reader = new FileReader();
-        
-                reader.onload = r => {
-                    preview.src = r.target.result;
-                }
-        
-                reader.readAsDataURL(result)
                 setImageFile(result)
             }
         })
