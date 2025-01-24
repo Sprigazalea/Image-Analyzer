@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
 import ParseImage from './ParseImage'
-import RemoveEXIF from './RemoveEXIF'
+import Compressor from 'compressorjs'
 
 function SideContent() {
     let [isUploadOpen, setIsUploadOpen] = useState(false);
@@ -19,6 +19,22 @@ function SideContent() {
     const inputFile = useRef(null);
     const imageFileNameRef = useRef();
     
+    function RemoveEXIF(imageFile) {
+        new Compressor(imageFile, {
+            success(result) {
+                const preview = document.getElementById('image-preview');
+                const reader = new FileReader();
+        
+                reader.onload = r => {
+                    preview.src = r.target.result;
+                }
+        
+                reader.readAsDataURL(result)
+                ParseImage(result)
+            }
+        })
+    }   
+
     function MyDropzone() {
         const onDrop = useCallback(acceptedFiles => {
             const image = acceptedFiles[0]
