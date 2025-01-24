@@ -19,7 +19,7 @@ function SideContent() {
     const inputFile = useRef(null);
     const imageFileNameRef = useRef();
     
-    function RemoveEXIF(imageFile) {
+    function RemoveEXIF() {
         new Compressor(imageFile, {
             success(result) {
                 const preview = document.getElementById('image-preview');
