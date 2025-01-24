@@ -10,7 +10,11 @@ export default function ParseImage(imageFile) {
 
             console.log(formattedString)
 
-            textarea.value = formattedString;
+            if (!formattedString) {
+                textarea.value = 'No Metadata Found!'
+            } else {
+                textarea.value = formattedString;
+            }
         })
     }
 
