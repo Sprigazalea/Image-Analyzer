@@ -125,7 +125,7 @@ function SideContent() {
                 <a onClick={() => {setIsFAQOpen(true); toggleDim()}}><p>FAQ</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {setIsCompatOpen(true); toggleDim()}}><p>Compatibility</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {NoImage(); RemoveEXIF(imageFile)}}><p>Remove EXIF Data</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
-                <a onClick={() => {NoImage()}} href={imageFile} download={imageFile}><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
+                <a onClick={() => {NoImage()}} id='export-button'><p>Export</p> <FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
                 <a onClick={() => {setIsCreditsOpen(true); toggleDim()}}><p>Credits</p><FontAwesomeIcon icon={faAngleRight} className='right-icon'/></a>
             </div>
         </motion.div>
