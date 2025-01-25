@@ -45,6 +45,18 @@ I found a [StackOverflow post](https://stackoverflow.com/questions/13300137/how-
 
 I took a bit to think about it regardless. My partner convinced me it would probably be easier to attempt to use a different package instead, given I did have an option. Just to see what would happen, I attempted to use the Compressor.js package to remove the data, and I was able to get it working decently quickly. I laugh now thinking about how I was willing to do so much work to accomplish something that another package could do without much effort lmao.
 
-Finally! My website was starting to look feature complete. I knew despite this, I still needed to update my imageFile state in order to account for the new image without the EXIF data. This was a bit harder than I was expecting. I couldnt use setImageFile as even though I was calling for it to execute from my SideContent file, the RemoveExif file could not access the states in the SIdeContent file. 
+Finally! My website was starting to look feature complete. I knew despite this, I still needed to update my imageFile state in order to account for the new image without the EXIF data. This was a bit harder than I was expecting. I couldnt use setImageFile as even though I was calling for it to execute from my SideContent file, the RemoveExif file could not access the states in the SideContent file. 
 
 The easiest solution to this problem would be to move the content of the RemoveExif file over to my SideContent file. After attempting this and getting it working without calling the ParseImage file, I could remove most of the logic written in the Compressor function (which admittedly wasn't a lot to begin with), and it could now fit comfortably within my larger file.
+
+# Export Button
+
+I thought at first I could insert the imageFile state call into the href and it would point to my file to download without issue. However, when I clicked the button, it attempted to download the Blob Object as an HTML file. If I wanted to allow the user to download the edited image, I needed that Blob Object to be the same file type that was originally uploaded by the user. 
+
+For this, I decided to try something I hadn't tried before. After trying to find the answer and not quite getting what I was looking for, I tried asking ChatGPT. I asked something along the lines of "how would I allow the user to download a file that they uploaded to a website, after I made changes to that file?" and it gave me a surprisingly detailed answer. 
+
+I asked it to focus on a specific step of the process that it laid out. I said "I have a question regarding the third step. I am trying to let the user download a file I have stored in a react state. Could I point the href to that state to allow the user to download it" and it also gave a very helpful answer.
+
+It said that I couldn't do that because the file exists as an object that the user wouldn't be able to access unless I created a URL for a blob. It gave me an example of this in action and I took from it to implement the download function. 
+
+Despite this, the answer ChatGPT gave me wasn't perfect, and I could tell that it wasn't before I started taking from it's example. I took it one line at a time, and implemented only what I thought was needed. If it behaved in a way I didn't expect, I changed it to work properly. It actually wasn't all that bad of a process, and gives me reassurance that ChatGPT won't be an issue in the future if I am able to judge it's answers before I implement them.
