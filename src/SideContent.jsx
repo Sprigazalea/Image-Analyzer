@@ -19,6 +19,16 @@ function SideContent() {
     const inputFile = useRef(null);
     const imageFileNameRef = useRef();
     
+    function handleDownload() {
+        if (!imageFile) return;
+
+        const exportButton = document.getElementById('export-button');
+
+        const url = URL.createObjectURL(imageFile)
+        exportButton.href = url
+        exportButton.download = imageFile.name
+    }
+
     function RemoveEXIF() {
         new Compressor(imageFile, {
             success(result) {
