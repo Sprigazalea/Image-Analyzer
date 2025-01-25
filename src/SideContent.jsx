@@ -32,7 +32,6 @@ function SideContent() {
     function RemoveEXIF() {
         new Compressor(imageFile, {
             success(result) {
-                result = new File([result], result.name)
                 setImageFile(result)
             }
         })
