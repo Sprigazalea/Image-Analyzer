@@ -8,8 +8,6 @@ export default function ParseImage(imageFile) {
 
             const formattedString = rawOutput
 
-            console.log(formattedString)
-
             if (!formattedString) {
                 textarea.value = 'No Metadata Found!'
             } else {
