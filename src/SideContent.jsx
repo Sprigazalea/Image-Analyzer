@@ -182,6 +182,7 @@ function SideContent() {
                 <DialogPanel className='modal-panel'>
                     <h2>Credits</h2>
                     <p><a href='https://github.com/MikeKovarik/exifr'>EXIFR</a> - Javascript Library that reads all the data</p>
+                    <p><a href='https://github.com/fengyuanchen/compressorjs'>Compressor.js</a> - JS Library meant for compression that has a really handy EXIF tool</p>
                 </DialogPanel>
             </div>
         </Dialog>
@@ -191,3 +192,9 @@ function SideContent() {
 }
 
 export default SideContent
+
+// TODO
+//
+// Finish Compat Modal
+// Finish Credits Modal
+// Update FAQ Modal
