@@ -161,9 +161,7 @@ function SideContent() {
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <h2>What is this website?</h2>
-                    <p>Essentially, it is a Web GUI for the EXIFR library. It takes images and outputs the metadata stored within.</p>
-                    <h2>What metadata can it read?</h2>
-                    <p>EXIFR</p>
+                    <p>Essentially, it reads the metadata of images using the EXIFR library. It takes images and outputs the metadata stored within.</p>
                     <h2>Are there any privacy concerns I should worry about?</h2>
                     <p>Most likely not. The parsing done on the website does not interact with any server components, all running on javascript loaded locally.</p>
                 </DialogPanel>
@@ -173,6 +171,9 @@ function SideContent() {
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <h2>Supported Files</h2>
+                    <p>.jpg, .tif, .png, .heic, .avif, and .iiq files are all supported</p>
+                    <h2>What metadata can it read?</h2>
+                    <p>TIFF (EXIF, GPS, IFD0, and IFD1), XMP, ICC, IPTC, JFIF, and IHDR</p>
                 </DialogPanel>
             </div>
         </Dialog>
@@ -180,6 +181,7 @@ function SideContent() {
             <div className='modal-div'>
                 <DialogPanel className='modal-panel'>
                     <h2>Credits</h2>
+                    <p><a href='https://github.com/MikeKovarik/exifr'>EXIFR</a> - Javascript Library that reads all the data</p>
                 </DialogPanel>
             </div>
         </Dialog>
