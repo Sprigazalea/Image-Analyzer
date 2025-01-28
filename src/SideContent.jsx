@@ -183,6 +183,7 @@ function SideContent() {
                     <h2>Credits</h2>
                     <p><a href='https://github.com/MikeKovarik/exifr'>EXIFR</a> - Javascript Library that reads all the data</p>
                     <p><a href='https://github.com/fengyuanchen/compressorjs'>Compressor.js</a> - JS Library meant for compression that has a really handy EXIF tool</p>
+                    <p>Made by Riley Dickerson (Sprigazalea)</p>
                 </DialogPanel>
             </div>
         </Dialog>
@@ -198,3 +199,4 @@ export default SideContent
 // Finish Compat Modal
 // Finish Credits Modal
 // Update FAQ Modal
+// Finish README
