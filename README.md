@@ -8,6 +8,22 @@ I knew I wanted the website to be built using React, as before this, I only made
 
 I also knew I wanted to have multiple components in separate files interacting with one another. This was because my previous projects for freeCodeCamp had to be done all in one file. In the end, I didn't do this as much as I thought I would have. I probably could have done it more if I used a state management library, but I could get away with not using it for now, so I did not.
 
+# Setup and Creating The Project
+
+I remember I had an issue deploying React in a way I understood. On freeCodeCamp, I made a div in the html file that the entire React file would use to display everything. I used Vite to create the project, and it had a main.jsx file that  everything went into. I wanted to use several files and it wasn't immediately clear to me how I was supposed to do this. 
+
+I used a script file to put the main.jsx file into the html, so anything that wasn't main.jsx, would be used within that same file. I had a SideContent and MainContent file that I called inside the return of that main.jsx file. 
+
+# SideContent and MainContent 
+
+SideContent would be for selecting options and uploading the image, while MainContent would display the image metadata. My idea for the MainContent involved having alternating background colors for each line. From some surface-level research, it was recommended I look into a WYSIWYG (What You See Is What You Get) Text Editor to insert into the file to get more customization. 
+
+I attempted a few of them, but none of them quite offered the customization I was looking for, at least not easily. After trying and failing to implement 5 of them in a way I was satisfied with, I attempted to brute-force a solution using a textarea.
+
+Maybe I could use an image? That isn't easily scalable, however. I think it was my best option though. I found a stackOverflow post suggesting maybe I could use a linear gradient as the background, that switched between each color at the same length as the size of the font. 
+
+This solution has some problems however. It is somewhat difficult to make the font fit perfectly within the lines, even when the alignment of each line was perfect. Generally speaking though, this was what I was looking for as my solution. It works and does what I want.
+
 # Choosing [EXIFR](https://github.com/MikeKovarik/exifr)
 
 Once I had image thumbnails appearing on screen, I went ahead and did research on what Javascript library would be the most appropriate for parsing typical image file formats, such as JPEG and PNG. 
