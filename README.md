@@ -24,6 +24,12 @@ Maybe I could use an image? That isn't easily scalable, however. I think it was 
 
 This solution has some problems however. It is somewhat difficult to make the font fit perfectly within the lines, even when the alignment of each line was perfect. Generally speaking though, this was what I was looking for as my solution. It works and does what I want.
 
+# AcceptImage function
+
+I needed to have an input that would accept the image thats uploaded by the user. This was a bit harder than I was expecting, because I wanted full control over what the button would look like, alongside putting the file name somewhere else that I wanted more control over. 
+
+I achieved this after finding another stackOverflow post that gave me a decent solution. It involved creating a couple of refs and a separate button that, when clicked, would simulate a click on an invisible input tag. All of this could be done with refs as it could accept the file name without refreshing the entire page. 
+
 # Choosing [EXIFR](https://github.com/MikeKovarik/exifr)
 
 Once I had image thumbnails appearing on screen, I went ahead and did research on what Javascript library would be the most appropriate for parsing typical image file formats, such as JPEG and PNG. 
