@@ -159,7 +159,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 1000px;
+  height: 900px;
   width: 600px;
   background-color: #1e1e1e;
   border-radius: 15px;
@@ -175,7 +175,7 @@ textarea {
   background-size: 100% 3rem;
   border: none;
   color: white;
-  height: 960px;
+  height: 880px;
   width: 560px;
   font-size: 1.25rem;
   resize: none;
@@ -209,7 +209,7 @@ textarea:focus {
   background-color: white;
   max-width: 600px;
   border-radius: 10px;
-  padding: 15px 30px 15px 30px;
+  padding: 10px 20px 10px 20px;
 }
 
 .modal-box {
