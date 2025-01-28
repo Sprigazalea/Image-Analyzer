@@ -1,3 +1,9 @@
+# Conceptualization
+
+Around the time I had the idea to make a website that reads image metadata, I drew out what I wanted the website to look like.
+
+![Drawing of the Website](readme_images/PXL_20241017_050121930.jpg)
+
 # Choosing [EXIFR](https://github.com/MikeKovarik/exifr)
 
 Once I had image thumbnails appearing on screen, I went ahead and did research on what Javascript library would be the most appropriate for parsing typical image file formats, such as JPEG and PNG. 
