@@ -4,6 +4,10 @@ Around the time I had the idea to make a website that reads image metadata, I dr
 
 ![Drawing of the Website](readme_images/PXL_20241017_050121930.jpg)
 
+I knew I wanted the website to be built using React, as before this, I only made React projects for my certification on the freeCodeCamp website. I wanted to see how it would be to use it in a more typical environment.
+
+I also knew I wanted to have multiple components in separate files interacting with one another. This was because my previous projects for freeCodeCamp had to be done all in one file. In the end, I didn't do this as much as I thought I would have. I probably could have done it more if I used a state management library, but I could get away with not using it for now, so I did not.
+
 # Choosing [EXIFR](https://github.com/MikeKovarik/exifr)
 
 Once I had image thumbnails appearing on screen, I went ahead and did research on what Javascript library would be the most appropriate for parsing typical image file formats, such as JPEG and PNG. 
