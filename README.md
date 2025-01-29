@@ -26,9 +26,11 @@ This solution has some problems however. It is somewhat difficult to make the fo
 
 # AcceptImage function
 
-I needed to have an input that would accept the image thats uploaded by the user. This was a bit harder than I was expecting, because I wanted full control over what the button would look like, alongside putting the file name somewhere else that I wanted more control over. 
+I needed to have an input that would accept the image uploaded by the user. This was a bit harder than I was expecting, because I wanted full control over what the button would look like, alongside putting the file name somewhere else that I wanted more control over. This is opposed to having a typical file input tag works, where it had a button alongside the file name.
 
 I achieved this after finding another stackOverflow post that gave me a decent solution. It involved creating a couple of refs and a separate button that, when clicked, would simulate a click on an invisible input tag. All of this could be done with refs as it could accept the file name without refreshing the entire page. 
+
+Once the image was uploaded, it would be stored in an imageFile state that can be used throughout the website.
 
 # Choosing [EXIFR](https://github.com/MikeKovarik/exifr)
 
@@ -92,3 +94,9 @@ I asked it to focus on a specific step of the process that it laid out. I said "
 It said that I couldn't do that because the file exists as an object that the user wouldn't be able to access unless I created a URL for a blob. It gave me an example of this in action and I took from it to implement the download function. 
 
 Despite this, the answer ChatGPT gave me wasn't perfect, and I could tell that it wasn't before I started taking from it's example. I took it one line at a time, and implemented only what I thought was needed. If it behaved in a way I didn't expect, I changed it to work properly. It actually wasn't all that bad of a process, and gives me reassurance that ChatGPT won't be an issue in the future if I am able to judge it's answers before I implement them.
+
+# Final Touches
+
+After finalizing the modals and adjusting some CSS, the website is now feature complete. 
+
+I learned how to use different libraries in different contexts, like React, Headless UI, EXIFR, and CompressJS. I had to learn how files could come in different contexts, either through a file or blob object, to allow for editing, alongside how to create URLs to allow for exporting. I also utilized the differences between useState and useRef to either update the page entirely, or only update certain sections depending on the context. 
