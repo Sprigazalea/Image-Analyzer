@@ -83,6 +83,8 @@
 
 .highlight-div:hover {
   background-color: #505050;
+  -webkit-transition: background-color 0.175s ease-in-out;
+  transition: background-color 0.175s ease-in-out;
 }
 
 .highlight-div:hover .arrow-icon {
@@ -134,8 +136,8 @@
 
 .side-options > a:hover {
   background-color: #0a0a0a;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.175s ease-in-out;
+  transition: background-color 0.175s ease-in-out;
 }
 
 .side-options > a > p {

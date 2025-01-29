@@ -62,6 +62,7 @@ $background_color_6: rgb(38, 38, 38);
     width: 250px;
     &:hover {
         background-color: $background-color_5;
+        transition: background-color 0.175s ease-in-out;
         .arrow-icon {
             color: $background-color_3;
         }
@@ -97,7 +98,7 @@ $background_color_6: rgb(38, 38, 38);
         text-decoration: none;
         &:hover{
             background-color: $background-color_4;
-            transition: background-color 0.2s ease-in-out;
+            transition: background-color 0.175s ease-in-out;
         }
         > p {
             margin: 0;
