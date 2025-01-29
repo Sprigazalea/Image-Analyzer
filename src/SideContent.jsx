@@ -182,6 +182,7 @@ function SideContent() {
                     <h2>Credits</h2>
                     <p><a href='https://github.com/MikeKovarik/exifr'>EXIFR</a> - Javascript Library that reads all the data</p>
                     <p><a href='https://github.com/fengyuanchen/compressorjs'>Compressor.js</a> - JS Library meant for compression that has a really handy EXIF tool</p>
+                    <p>Special Thanks to Kito, Judas, and Shima</p>
                     <p>Made by Riley Dickerson (Sprigazalea)</p>
                 </DialogPanel>
             </div>
