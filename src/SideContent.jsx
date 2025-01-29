@@ -196,7 +196,4 @@ export default SideContent
 
 // TODO
 //
-// Finish Compat Modal
-// Finish Credits Modal
-// Update FAQ Modal
 // Finish README
