@@ -89,6 +89,8 @@
 
 .highlight-div:hover .arrow-icon {
   color: #1e1e1e;
+  -webkit-transition: color 0.175s ease-in-out;
+  transition: color 0.175s ease-in-out;
 }
 
 #image-preview {

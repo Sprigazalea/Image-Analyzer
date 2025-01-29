@@ -65,6 +65,7 @@ $background_color_6: rgb(38, 38, 38);
         transition: background-color 0.175s ease-in-out;
         .arrow-icon {
             color: $background-color_3;
+            transition: color 0.175s ease-in-out;
         }
     }
 }
