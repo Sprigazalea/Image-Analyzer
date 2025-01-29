@@ -128,7 +128,6 @@ function SideContent() {
 
     useEffect(() => {
         ParseImage(imageFile)
-        console.log(imageFile)
     }, [imageFile])
 
     return (
