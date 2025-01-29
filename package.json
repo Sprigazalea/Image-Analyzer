@@ -2,7 +2,7 @@
   "name": "image-analyzer",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://imageanalyzer.sprigazalea.xyz/",
+  "homepage": "https://sprigazalea.github.io/Image-Analyzer",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
